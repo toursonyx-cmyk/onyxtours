@@ -1,0 +1,750 @@
+/* Enhanced Header from index.html */
+/* Enhanced Navigation */
+/* Tour Button with Tag */
+.tour-nav-item {
+            position: relative;
+        }
+.tour-tag {
+            position: absolute;
+            top: -8px;
+            right: -5px;
+            background: var(--gold);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+/* WhatsApp & Email Floaters from index.html */
+/* Hero Banner */
+.hero-banner {
+            background: url('../img/tours/all-tours/cape-peninsula-3.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 80px;
+            position: relative;
+            text-align: center;
+            margin-top: -70px; /* Offset for fixed nav */
+        }
+.hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b325' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+            pointer-events: none;
+        }
+.hero-banner > .container {
+            position: relative;
+            z-index: 1;
+        }
+.page-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+.page-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+/* PDF Download Banner */
+.pdf-download-banner {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+.pdf-download-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+.pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+.pdf-download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: #d19c1f;
+            color: var(--primary);
+        }
+.pdf-download-btn i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+/* Price List Section */
+.price-list-section {
+            background: var(--light);
+            padding: 80px 0;
+        }
+.price-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--gray);
+            height: 100%;
+        }
+.price-card h4 {
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+.price-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+.price-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--gray);
+            font-weight: 500;
+        }
+.price-list li:last-child {
+            border-bottom: none;
+        }
+.price-list strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+.price-note {
+            margin-top: 8px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+.price-inclusions {
+            margin-top: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 16px;
+            padding: 24px;
+        }
+.price-inclusions h5 {
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+.price-inclusions ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+.price-inclusions li {
+            margin-bottom: 8px;
+        }
+/* Vehicle Showcase */
+.vehicle-showcase {
+            background: var(--light);
+            padding: 50px 0;
+        }
+.vehicle-video-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            border: 5px solid white;
+        }
+.vehicle-video-container video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+.vehicle-details {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-top: 20px;
+        }
+/* Tour Categories Tabs */
+.categories-tabs {
+            background: transparent;
+            padding: 0 0 20px;
+            border-bottom: none;
+        }
+.nav-tabs-custom {
+            border: none;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+            padding: 8px 10px;
+            background: transparent;
+            border-radius: 999px;
+            flex-wrap: wrap;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+.nav-tabs-custom .nav-link {
+            background: var(--gold);
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 10px 22px;
+            margin: 0;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+        }
+.nav-tabs-custom .nav-link:hover {
+            background: #d19c1f;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+.nav-tabs-custom .nav-link.active {
+            background: var(--gold);
+            color: var(--primary);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
+        }
+/* Tour Packages Section */
+.packages-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+.section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+.section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+.section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+.category-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+/* Day Tour Examples */
+.day-tour-examples,
+.multi-day-examples {
+            max-width: 1100px;
+            margin: 0 auto 50px;
+        }
+.examples-title {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+.tour-example-card {
+            background: white;
+            border-radius: 12px;
+            padding: 26px 22px;
+            text-align: center;
+            height: 100%;
+            border: 1px solid var(--gray);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+.tour-example-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+.tour-example-link:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px;
+            border-radius: 12px;
+        }
+.tour-example-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+            border-color: var(--gold);
+        }
+.tour-example-icon {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+.tour-example-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+/* Tour Card - MATCHING index.html STYLE */
+.tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+.tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+.tour-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 2;
+        }
+.tour-slideshow {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+.tour-slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+.tour-slideshow img:not(.active) {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+.slideshow-controls {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+        }
+.slide-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+.slide-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+.tour-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+.tour-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+.tour-price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+.tour-duration {
+            color: #666;
+            font-size: 0.9rem;
+        }
+.tour-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+.tour-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-left: 25px;
+        }
+.tour-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+.tour-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+.quick-view-btn {
+            flex: 1;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+.quick-view-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+.book-now-btn {
+            flex: 1;
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+.book-now-btn:hover {
+            background: #d19c1f;
+            transform: translateY(-2px);
+            color: var(--primary);
+        }
+/* Center cards in grid */
+.tour-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+/* Centered card container */
+.card-container {
+            display: flex;
+            justify-content: center;
+        }
+/* Ensure cards are equal height */
+.tour-card .tour-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+/* FAQ Section */
+.faq-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+.accordion-button:not(.collapsed) {
+            background-color: var(--primary);
+            color: white;
+        }
+.accordion-button:not(.collapsed)::after {
+            filter: invert(1);
+        }
+.accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(230, 179, 37, 0.25);
+            border-color: var(--gold);
+        }
+/* CTA Section */
+.cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+.cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+/* Footer with Logo from index.html */
+footer {
+            background-color: #000;
+            color: var(--gold);
+            padding: 70px 0 20px;
+        }
+.footer-logo-container {
+            width: 120px;
+            height: 90px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: none;
+            margin-bottom: 20px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+.footer-logo-container img,
+.footer-logo-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+.footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+.social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+.social-icons a:hover {
+            background: var(--gold);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+.footer-links h5 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+.footer-links h5::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--gold);
+            bottom: 0;
+            left: 0;
+        }
+.footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+.footer-links ul li {
+            margin-bottom: 12px;
+        }
+.footer-links ul li a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+.footer-links ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+.copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gold);
+        }
+/* Animations */
+.fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+/* Responsive */
+@media (max-width: 1200px) {
+            .tour-cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+@media (max-width: 992px) {
+            .page-title {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .packages-section, .faq-section, .cta-section {
+                padding: 70px 0;
+            }
+            
+            .logo-image-container {
+                width: 130px;
+                height: 100px;
+            }
+            
+            .vehicle-video-container video {
+                height: 250px;
+            }
+            
+            .whatsapp-float, .email-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: calc(16px + env(safe-area-inset-bottom));
+                right: calc(16px + env(safe-area-inset-right));
+            }
+            
+            .email-float {
+                bottom: calc(78px + env(safe-area-inset-bottom));
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
+        }
+@media (max-width: 768px) {
+            .hero-banner {
+                background: linear-gradient(rgba(10, 10, 30, 0.85), rgba(10, 10, 30, 0.9)), url('../img/tours/all-tours/cape-peninsula-3.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .tour-actions {
+                flex-direction: column;
+            }
+            
+            .vehicle-video-container video {
+                height: 200px;
+            }
+            
+            .tour-tag {
+                top: -5px;
+                right: 0;
+                font-size: 0.6rem;
+                padding: 1px 4px;
+            }
+
+            .nav-tabs-custom {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .nav-tabs-custom .nav-item {
+                width: 100%;
+            }
+
+            .nav-tabs-custom .nav-link {
+                width: 100%;
+                padding: 12px 10px;
+                font-size: 0.9rem;
+                line-height: 1.2;
+                text-align: center;
+                white-space: normal;
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+@media (max-width: 576px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .hero-banner {
+                margin-top: -60px;
+                padding: 120px 0 60px;
+            }
+            
+            .vehicle-video-container video {
+                height: 180px;
+            }
+            
+            .tour-tag {
+                display: none;
+            }
+            
+            .logo-image-container {
+                width: 120px;
+                height: 90px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-float, .email-float {
+                bottom: calc(90px + env(safe-area-inset-bottom));
+                right: calc(16px + env(safe-area-inset-right));
+            }
+
+            .email-float {
+                bottom: calc(150px + env(safe-area-inset-bottom));
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs-custom {
+                grid-template-columns: 1fr;
+            }
+        }

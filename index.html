@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONYX Shuttle & Tour Services | Luxury Cape Town Tours</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27739163011?text=Hi%20ONYX%20Tours,%20I'd%20like%20to%20book%20a%20tour" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Email Float Button -->
+    <a href="mailto:info@onyxtours.co.za?subject=Tour%20Booking%20Inquiry" class="email-float" title="Send Email">
+        <i class="far fa-envelope"></i>
+    </a>
+
+    <!-- Enhanced Navigation from tours.html -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-image-container">
+                    <video class="logo-video" autoplay muted loop playsinline aria-label="ONYX logo animation">
+                        <source src="assets/img/ONYX_logo_animation_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            <i class="fas fa-home me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            <i class="fas fa-concierge-bell me-2"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item tour-nav-item">
+                        <a class="nav-link" href="pages/tours.html">
+                            <i class="fas fa-map-marked-alt me-2"></i>Tours
+                            <span class="tour-tag">12+</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#booking">
+                            <i class="far fa-calendar-alt me-2"></i>Booking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-headset me-2"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary-custom" href="tel:0610268025">
+                            <i class="fas fa-phone-alt me-2"></i> 061 026 8025
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-stats-wrap">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 fade-in">
+                    <h1 class="hero-title">EXPLORE • DISCOVER • ENJOY</h1>
+                    <p class="hero-subtitle">Welcome to Onyx Shuttle and Tour Services, where luxury meets reliability. We provide a premium, executive transport experience across Cape Town and the Garden Route, designed for clients who value comfort, privacy, and professionalism.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#booking" class="btn btn-primary-custom">
+                            <i class="far fa-calendar-alt me-2"></i> Book Now
+                        </a>
+                        <a href="#tours" class="btn btn-secondary-custom">
+                            <i class="fas fa-map-marked-alt me-2"></i> View Tours
+                        </a>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-shield-alt fa-2x" style="color: var(--gold);"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Safe & Reliable</h5>
+                                    <p class="mb-0 small">Professional drivers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-car fa-2x" style="color: var(--gold);"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Luxury Vehicles</h5>
+                                    <p class="mb-0 small">Hyundai Staria Fleet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-clock fa-2x" style="color: var(--gold);"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">24/7 Service</h5>
+                                    <p class="mb-0 small">Always available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0 fade-in">
+                    <div class="contact-form-container">
+                        <h3 class="mb-4">Quick Booking Inquiry</h3>
+                        <form id="quickBookingForm" action="https://formspree.io/f/meeljvjv" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-custom" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control form-control-custom" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-custom" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select form-select-custom" id="quickServiceSelect" name="service" required>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="airport">Airport Transfer - From R350</option>
+                                    <option value="city">Cape Town City Tour - From R850 pp</option>
+                                    <option value="peninsula">Cape Peninsula Tour - From R1,250 pp</option>
+                                    <option value="winelands">Stellenbosch Winelands - From R1,450 pp</option>
+                                    <option value="garden3">3-Day Garden Route - From R4,800 pp</option>
+                                    <option value="garden5">5-Day Garden Route - From R7,200 pp</option>
+                                    <option value="safari">2-Day Safari - From R3,500 pp</option>
+                                    <option value="helicopter">Helicopter Ride - From R2,800 pp</option>
+                                    <option value="shark">Shark Cage Diving - From R2,200 pp</option>
+                                    <option value="hermanus">Hermanus Coastal - From R1,100 pp</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="service_label" id="quickServiceLabel">
+                            <div class="mb-3">
+                                <input type="date" class="form-control form-control-custom" name="preferred_date" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control form-control-custom" name="message" rows="3" placeholder="Your message (optional)"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                <i class="far fa-paper-plane me-2"></i> Request Booking
+                            </button>
+                        </form>
+                        <p class="mt-3 small opacity-75">We'll contact you within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-text">Happy Customers</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-text">Tour Destinations</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-text">/7 Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p class="mt-3">Luxury, reliable executive travel with comfort, privacy, and professionalism.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="about-content">
+                        <p class="lead">Welcome to Onyx Shuttle and Tour Services, where luxury meets reliability. We provide a premium, executive transport experience across Cape Town and the Garden Route, designed for clients who value comfort, privacy, and professionalism.</p>
+                        <p>From airport transfers and corporate chauffeur services to hotel transfers, events, long-distance travel, and private tours, every journey is tailored to your schedule and delivered with precision.</p>
+                        <p>Our focus is on punctuality, discretion, and exceptional service, ensuring a seamless experience from pickup to drop-off.</p>
+                        <p>At Onyx, we understand that private travel is about more than getting from point A to point B - it is about travelling in comfort and arriving with confidence. With immaculate vehicles, professional drivers, and personalised attention, we offer a refined service you can trust every time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - UPDATED WITH PRICES -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p class="mt-3">Safe • Reliable • Convenient Door-to-Door Services</p>
+            </div>
+            <div class="row g-4">
+                <!-- Airport & City Transfers -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R350</div>
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h4>Airport & City Transfers</h4>
+                        <p>Professional door-to-door transfers for airports, hotels, offices, and events. Our chauffeurs ensure punctual, comfortable service.</p>
+                        <ul class="service-features">
+                            <li>Airport meet & greet service</li>
+                            <li>Hotel & lodge transfers</li>
+                            <li>Corporate executive travel</li>
+                            <li>Events & special occasions</li>
+                            <li>Flight tracking included</li>
+                            <li>24/7 availability</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="airport">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day Tours -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R850 pp</div>
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>Day Tours</h4>
+                        <p>Experience Cape Town's highlights in a single day. Our private day tours offer flexibility, comfort, and expert local insight.</p>
+                        <ul class="service-features">
+                            <li>Cape Peninsula & Cape Point</li>
+                            <li>Cape Town City Highlights</li>
+                            <li>Table Mountain experiences</li>
+                            <li>Hermanus Coastal tours</li>
+                            <li>Fully customizable itineraries</li>
+                            <li>Professional chauffeur-guide</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="city">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Winelands Experiences -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R1,450 pp</div>
+                        <div class="service-icon">
+                            <i class="fas fa-wine-glass-alt"></i>
+                        </div>
+                        <h4>Winelands Experiences</h4>
+                        <p>Discover South Africa's world-renowned wine regions with private tours that include premium tastings and gourmet cuisine.</p>
+                        <ul class="service-features">
+                            <li>Stellenbosch wine estates</li>
+                            <li>Franschhoek Wine Tram</li>
+                            <li>Paarl boutique wineries</li>
+                            <li>Wine tasting sessions</li>
+                            <li>Gourmet food pairings</li>
+                            <li>Scenic vineyard tours</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="winelands">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Multi-Day Tours -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R4,800 pp</div>
+                        <div class="service-icon">
+                            <i class="fas fa-suitcase-rolling"></i>
+                        </div>
+                        <h4>Multi-Day Tours</h4>
+                        <p>Explore beyond Cape Town with bespoke multi-day tours along the Garden Route and other scenic destinations.</p>
+                        <ul class="service-features">
+                            <li>Garden Route adventures (3-5 days)</li>
+                            <li>Winelands & coastal escapes</li>
+                            <li>Safari & wildlife experiences</li>
+                            <li>Luxury accommodations included</li>
+                            <li>All meals & activities arranged</li>
+                            <li>Personalized itineraries</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="garden3">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Adventure Tours -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R2,200 pp</div>
+                        <div class="service-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h4>Adventure Experiences</h4>
+                        <p>Thrilling adventures without compromising on comfort. Helicopter rides, shark cage diving, and scenic mountain drives.</p>
+                        <ul class="service-features">
+                            <li>Helicopter aerial tours</li>
+                            <li>Shark cage diving transfers</li>
+                            <li>Quad biking adventures</li>
+                            <li>Scenic mountain passes</li>
+                            <li>Coastal cliff walks</li>
+                            <li>All transport included</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="helicopter">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wildlife & Safari -->
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="service-card">
+                        <div class="service-price">From R3,500 pp</div>
+                        <div class="service-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h4>Wildlife & Safari Tours</h4>
+                        <p>Get closer to nature with private transfers to game reserves and wildlife sanctuaries for unforgettable safari experiences.</p>
+                        <ul class="service-features">
+                            <li>Big Five game reserves</li>
+                            <li>Private wildlife sanctuaries</li>
+                            <li>Ethical animal encounters</li>
+                            <li>Multiple game drives</li>
+                            <li>Luxury lodge accommodation</li>
+                            <li>Conservation-focused tours</li>
+                        </ul>
+                        <div class="tour-actions mt-3">
+                            <a href="#booking" class="book-now-btn w-100" data-service="safari">
+                                <i class="far fa-calendar-alt me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pages/tours.html" class="btn btn-secondary-custom">
+                    <i class="fas fa-list me-2"></i> View All 12+ Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Explore Cape Town Section with Logo Image Background -->
+    <section class="explore-section">
+        <!-- Logo Background -->
+        <div class="logo-background"></div>
+        
+        <!-- Overlay for better text readability -->
+        <div class="logo-overlay"></div>
+        
+        <!-- Content -->
+        <div class="container">
+            <div class="explore-content fade-in">
+                <h2 class="explore-title">Ready to Explore Cape Town?</h2>
+                <p class="explore-subtitle">Join hundreds of satisfied travelers who've experienced the beauty of South Africa with ONYX. Your luxury adventure begins here with our premium shuttle and tour services.</p>
+                
+                <div class="explore-features">
+                    <div class="explore-feature fade-in">
+                        <div class="explore-feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Award-Winning Service</h4>
+                        <p>12+ years of excellence in luxury travel experiences with thousands of satisfied customers</p>
+                    </div>
+                    
+                    <div class="explore-feature fade-in">
+                        <div class="explore-feature-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h4>Luxury Fleet</h4>
+                        <p>Modern Hyundai Staria vehicles equipped with all amenities for maximum comfort</p>
+                    </div>
+                    
+                    <div class="explore-feature fade-in">
+                        <div class="explore-feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated support team available around the clock for any assistance you need</p>
+                    </div>
+                </div>
+                
+                <div class="explore-cta">
+                    <a href="#booking" class="btn btn-primary-custom btn-lg pulse-animation">
+                        <i class="far fa-calendar-alt me-2"></i> Book Your Adventure Now
+                    </a>
+                    <a href="tel:0610268025" class="btn btn-secondary-custom btn-lg">
+                        <i class="fas fa-phone-alt me-2"></i> Call to Book: 061 026 8025
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Private Tours Section -->
+    <section class="luxury-tours-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Private Luxury Tours</h2>
+                <p class="mt-3">Explore Cape Town and the Garden Route in comfort with our full range of private luxury tours. From iconic city highlights to scenic coastal drives and cultural experiences, all tours are chauffeur-guided and fully customisable. Ideal for first-time visitors, returning travellers, couples, families, and corporate guests seeking a premium, personalised experience.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tour-example-card">
+                        <div class="tour-example-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h4>Cape Town highlights</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tour-example-card">
+                        <div class="tour-example-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h4>Peninsula & coastal routes</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tour-example-card">
+                        <div class="tour-example-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h4>Scenic drives and cultural tours</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tour-example-card">
+                        <div class="tour-example-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h4>Custom itineraries on request</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Tours</h2>
+                <p class="mt-3">Explore South Africa's Most Beautiful Destinations</p>
+            </div>
+            <div class="row g-4">
+                <!-- Tour 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="tour-card fade-in">
+                        <div class="tour-badge">Most Popular</div>
+                                                <div class="tour-slideshow">
+                            <img src="assets/img/tours/all-tours/cape-peninsula-1.jpg" class="active" alt="Cape Point">
+                            <img src="assets/img/tours/all-tours/cape-peninsula-2.jpg" alt="Boulders Beach Penguins">
+                            <img src="assets/img/tours/all-tours/cape-peninsula-3.jpg" alt="Chapman's Peak Drive">
+                            <div class="slideshow-controls">
+                                <div class="slide-dot active" data-slide="0"></div>
+                                <div class="slide-dot" data-slide="1"></div>
+                                <div class="slide-dot" data-slide="2"></div>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <div class="tour-price">From R1,250 pp</div>
+                                <div class="tour-duration"><i class="far fa-clock me-1"></i> 8-10 hours</div>
+                            </div>
+                            <h4>Cape Peninsula & Cape of Good Hope</h4>
+                            <p class="text-muted">Full-day luxury tour along the stunning Cape Peninsula coastline.</p>
+                            
+                            <ul class="tour-features">
+                                <li>Cape Point & Cape of Good Hope</li>
+                                <li>Boulders Beach Penguin Colony</li>
+                                <li>Chapman's Peak Drive</li>
+                                <li>Gourmet picnic lunch included</li>
+                            </ul>
+                            
+                            <div class="tour-actions">
+                                <button class="quick-view-btn" data-tour="peninsula">
+                                    <i class="far fa-eye me-2"></i> Quick View
+                                </button>
+                                <a href="#booking" class="book-now-btn" data-service="peninsula">
+                                    <i class="far fa-calendar-alt me-2"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="tour-card fade-in">
+                        <div class="tour-badge" style="background: #28a745;">Wine Special</div>
+                                                <div class="tour-slideshow">
+                            <img src="assets/img/tours/all-tours/winelands-1.jpg" class="active" alt="Stellenbosch Vineyards">
+                            <img src="assets/img/tours/all-tours/winelands-2.jpg" alt="Wine Tasting">
+                            <img src="assets/img/tours/all-tours/winelands-3.jpg" alt="Vineyard Estate">
+                            <div class="slideshow-controls">
+                                <div class="slide-dot active" data-slide="0"></div>
+                                <div class="slide-dot" data-slide="1"></div>
+                                <div class="slide-dot" data-slide="2"></div>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <div class="tour-price">From R1,450 pp</div>
+                                <div class="tour-duration"><i class="far fa-clock me-1"></i> 7-9 hours</div>
+                            </div>
+                            <h4>Stellenbosch & Franschhoek Winelands</h4>
+                            <p class="text-muted">Experience world-class wines and breathtaking scenery.</p>
+                            
+                            <ul class="tour-features">
+                                <li>4 premium wine estate visits</li>
+                                <li>Wine tasting sessions</li>
+                                <li>Gourmet lunch included</li>
+                                <li>Scenic vineyard tours</li>
+                            </ul>
+                            
+                            <div class="tour-actions">
+                                <button class="quick-view-btn" data-tour="winelands">
+                                    <i class="far fa-eye me-2"></i> Quick View
+                                </button>
+                                <a href="#booking" class="book-now-btn" data-service="winelands">
+                                    <i class="far fa-calendar-alt me-2"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="tour-card fade-in">
+                        <div class="tour-badge" style="background: #ffc107; color: #000;">Adventure</div>
+                                                <div class="tour-slideshow">
+                            <img src="assets/img/tours/all-tours/garden-route-1.jpg" class="active" alt="Garden Route Coastline">
+                            <img src="assets/img/tours/all-tours/garden-route-2.jpg" alt="Knysna Lagoon">
+                            <img src="assets/img/tours/all-tours/garden-route-3.jpg" alt="Tsitsikamma Forest">
+                            <div class="slideshow-controls">
+                                <div class="slide-dot active" data-slide="0"></div>
+                                <div class="slide-dot" data-slide="1"></div>
+                                <div class="slide-dot" data-slide="2"></div>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <div class="tour-price">From R4,800 pp</div>
+                                <div class="tour-duration"><i class="far fa-clock me-1"></i> 3-5 days</div>
+                            </div>
+                            <h4>Garden Route Adventure</h4>
+                            <p class="text-muted">Multi-day adventure along the scenic Garden Route.</p>
+                            
+                            <ul class="tour-features">
+                                <li>Knysna & Plettenberg Bay</li>
+                                <li>Tsitsikamma National Park</li>
+                                <li>Wildlife encounters & safaris</li>
+                                <li>Luxury accommodations included</li>
+                            </ul>
+                            
+                            <div class="tour-actions">
+                                <button class="quick-view-btn" data-tour="garden">
+                                    <i class="far fa-eye me-2"></i> Quick View
+                                </button>
+                                <a href="#booking" class="book-now-btn" data-service="garden3">
+                                    <i class="far fa-calendar-alt me-2"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pages/tours.html" class="btn btn-secondary-custom">
+                    <i class="fas fa-list me-2"></i> View All 12+ Tour Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section - UPDATED WITH ALL SERVICES -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Tour</h2>
+                <p class="mt-3">Select your date and customize your experience</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="row g-0">
+                    <div class="col-lg-7">
+                        <div class="booking-form">
+                            <h3 class="mb-4" style="color: var(--primary);">Booking Form</h3>
+                            <form id="fullBookingForm" action="https://formspree.io/f/mnjbalqj" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control form-control-custom" name="first_name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control form-control-custom" name="last_name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control form-control-custom" name="email" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control form-control-custom" name="phone" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Select Service</label>
+                                    <select class="form-select form-select-custom" id="tourPackage" name="service" required>
+                                        <option value="" disabled selected>Choose a service</option>
+                                        <!-- Airport & City Transfers -->
+                                        <option value="airport">Airport Transfer - From R350</option>
+                                        <option value="hotel">Hotel Transfer - From R300</option>
+                                        <option value="corporate">Corporate Transfer - From R400</option>
+                                        <option value="event">Event Transfer - From R500</option>
+                                        
+                                        <!-- Day Tours -->
+                                        <option value="city">Cape Town City Tour - From R850 pp</option>
+                                        <option value="peninsula">Cape Peninsula Tour - From R1,250 pp</option>
+                                        <option value="hermanus">Hermanus Coastal Tour - From R1,100 pp</option>
+                                        <option value="tablemountain">Table Mountain Tour - From R900 pp</option>
+                                        
+                                        <!-- Winelands Tours -->
+                                        <option value="winelands">Stellenbosch Winelands - From R1,450 pp</option>
+                                        <option value="franschhoek">Franschhoek Wine Tram - From R1,650 pp</option>
+                                        <option value="paarl">Paarl Wineries - From R1,350 pp</option>
+                                        
+                                        <!-- Multi-Day Tours -->
+                                        <option value="garden3">3-Day Garden Route - From R4,800 pp</option>
+                                        <option value="garden5">5-Day Garden Route - From R7,200 pp</option>
+                                        <option value="winelands2">2-Day Winelands Escape - From R2,800 pp</option>
+                                        
+                                        <!-- Adventure Tours -->
+                                        <option value="helicopter">Helicopter Ride - From R2,800 pp</option>
+                                        <option value="shark">Shark Cage Diving - From R2,200 pp</option>
+                                        <option value="quad">Quad Biking - From R1,800 pp</option>
+                                        
+                                        <!-- Wildlife & Safari -->
+                                        <option value="safari">2-Day Safari - From R3,500 pp</option>
+                                        <option value="wildlife">Wildlife Sanctuary - From R1,500 pp</option>
+                                        
+                                        <!-- Custom Tour -->
+                                        <option value="custom">Custom Tour (Contact for quote)</option>
+                                    </select>
+                                    <input type="hidden" name="service_label" id="tourPackageLabel">
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Number of Passengers</label>
+                                        <select class="form-select form-select-custom" id="passengers" name="passengers" required>
+                                            <option value="1">1 Passenger</option>
+                                            <option value="2" selected>2 Passengers</option>
+                                            <option value="3">3 Passengers</option>
+                                            <option value="4">4 Passengers</option>
+                                            <option value="5">5 Passengers</option>
+                                            <option value="6">6 Passengers</option>
+                                            <option value="7">7+ Passengers (Contact us)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pickup Date (select multiple in calendar)</label>
+                                        <input type="date" class="form-control form-control-custom" id="pickupDate" name="pickup_date" required>
+                                        <input type="hidden" id="pickupDates" name="pickup_dates">
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pickup Time</label>
+                                        <select class="form-select form-select-custom" id="pickupTime" name="pickup_time" required>
+                                            <option value="08:00">08:00 AM</option>
+                                            <option value="09:00" selected>09:00 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="13:00">01:00 PM</option>
+                                            <option value="14:00">02:00 PM</option>
+                                            <option value="flexible">Flexible (We'll confirm)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pickup Location</label>
+                                        <input type="text" class="form-control form-control-custom" name="pickup_location" placeholder="Hotel/Address in Cape Town" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Special Requirements</label>
+                                    <textarea class="form-control form-control-custom" name="message" rows="3" placeholder="Dietary restrictions, mobility needs, special requests..."></textarea>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 id="priceDisplay" style="color: var(--accent);">Estimated Total: R2,500</h5>
+                                        <p class="small text-muted mb-0">Final price confirmed after booking</p>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary-custom px-5">
+                                        <i class="far fa-calendar-check me-2"></i> Confirm Booking
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div id="bookingCalendar">
+                            <h3 class="text-white mb-4">Available Dates</h3>
+                            <div id="calendar"></div>
+                            <div id="selectedDatesList" class="text-white small mt-3"></div>
+                            <div class="mt-4 pt-3 border-top border-light">
+                                <h5 class="text-white mb-3">Booking Information</h5>
+                                <ul class="text-light" style="padding-left: 20px;">
+                                    <li>Full payment required for confirmation</li>
+                                    <li>Free cancellation up to 48 hours before</li>
+                                    <li>Instant booking confirmation via email</li>
+                                    <li>Driver details sent 24 hours before pickup</li>
+                                    <li>All tours include luxury Hyundai Staria transport</li>
+                                    <li>Professional English-speaking chauffeur-guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Logo Background -->
+    <section id="contact" class="contact-section">
+        <!-- Logo Background -->
+        <div class="contact-logo-background"></div>
+        
+        <!-- Overlay for better text readability -->
+        <div class="contact-overlay"></div>
+        
+        <!-- Content -->
+        <div class="container contact-container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p class="mt-3">Get in touch to book your tour or shuttle service</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 fade-in">
+                    <h3 class="mb-4">Get In Touch</h3>
+                    <p>Ready to explore Cape Town and beyond? Contact us today to book your stress-free travel experience.</p>
+                    
+                    <div class="mt-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-phone-alt fa-2x" style="color: var(--gold);"></i>
+                            </div>
+                            <div>
+                                <h5>Phone Numbers</h5>
+                                <p class="mb-1"><a href="tel:0610268025" style="color: var(--gold);">061 026 8025</a> (Primary)</p>
+                                <p><a href="tel:0739163011" style="color: var(--gold);">073 916 3011</a> (Secondary)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3">
+                                <i class="far fa-envelope fa-2x" style="color: var(--gold);"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p><a href="mailto:info@onyxtours.co.za" style="color: var(--gold);">info@onyxtours.co.za</a></p>
+                                <p><a href="mailto:bookings@onyxtours.co.za" style="color: var(--gold);">bookings@onyxtours.co.za</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-map-marker-alt fa-2x" style="color: var(--gold);"></i>
+                            </div>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Based in Cape Town, South Africa</p>
+                                <p class="small">Service areas: Cape Town and surrounding regions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons mt-5">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/27739163011" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7 mt-5 mt-lg-0 fade-in">
+                    <div class="contact-form-container">
+                        <h3 class="mb-4">Send a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/mdalnyog" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control form-control-custom" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control form-control-custom" name="email" placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select form-select-custom" id="contactService" name="service" required>
+                                    <option value="" disabled selected>Service Interested In</option>
+                                    <option value="airport">Airport Transfers</option>
+                                    <option value="day">Day Tours</option>
+                                    <option value="winelands">Winelands Tours</option>
+                                    <option value="multi">Multi-Day Tours</option>
+                                    <option value="adventure">Adventure Tours</option>
+                                    <option value="safari">Safari & Wildlife</option>
+                                    <option value="corporate">Corporate Services</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                                <input type="hidden" name="service_label" id="contactServiceLabel">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control form-control-custom" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer from tours.html -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo-container">
+                        <video class="logo-video" autoplay muted loop playsinline aria-label="ONYX logo animation">
+                            <source src="assets/img/ONYX_logo_animation_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p>Premium luxury tours and transfers in Cape Town. Experience South Africa in comfort and style with our professional service.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/27739163011" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="pages/tours.html">All Tours</a></li>
+                            <li><a href="#booking">Book Now</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Our Services</h5>
+                        <ul>
+                            <li><a href="#services">Airport Transfers</a></li>
+                            <li><a href="#services">Day Tours</a></li>
+                            <li><a href="#services">Winelands Tours</a></li>
+                            <li><a href="#services">Multi-Day Tours</a></li>
+                            <li><a href="#services">Adventure Tours</a></li>
+                            <li><a href="#services">Safari & Wildlife</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-links">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li><i class="fas fa-phone me-2"></i> 061 026 8025</li>
+                            <li><i class="fas fa-phone me-2"></i> 073 916 3011</li>
+                            <li><i class="far fa-envelope me-2"></i> info@onyxtours.co.za</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Cape Town, RSA</li>
+                            <li><i class="fas fa-certificate me-2"></i> STA12389 Licensed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ONYX Shuttle & Tour Services. All rights reserved. | Professional Tour Operator | STA12389</p>
+                <p class="mb-0">Premium luxury experiences in Cape Town and beyond</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <!-- FullCalendar Google Calendar Plugin -->
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@5.11.3/main.min.js'></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Stats counter animation
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            const startCounter = (counter) => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const inc = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(() => startCounter(counter), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounter(entry.target);
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => {
+                statsObserver.observe(counter);
+            });
+            
+            // Tour slideshows
+            function initTourSlideshows() {
+                const slideshows = document.querySelectorAll('.tour-slideshow');
+                
+                slideshows.forEach(slideshow => {
+                    const dots = slideshow.querySelectorAll('.slide-dot');
+                    const images = slideshow.querySelectorAll('img');
+                    let currentSlide = 0;
+                    
+                    function showSlide(index) {
+                        images.forEach(img => {
+                            img.classList.remove('active');
+                            img.style.opacity = '0';
+                        });
+                        
+                        dots.forEach(dot => dot.classList.remove('active'));
+                        
+                        images[index].classList.add('active');
+                        images[index].style.opacity = '1';
+                        if (dots[index]) {
+                            dots[index].classList.add('active');
+                        }
+                        currentSlide = index;
+                    }
+                    
+                    dots.forEach((dot, index) => {
+                        if (dot.dataset.bound !== '1') {
+                            dot.addEventListener('click', () => showSlide(index));
+                            dot.dataset.bound = '1';
+                        }
+                    });
+
+                    if (images.length < 2) {
+                        return;
+                    }
+
+                    if (slideshow.dataset.intervalId) {
+                        clearInterval(Number(slideshow.dataset.intervalId));
+                    }
+
+                    // Auto-rotate every 3 seconds
+                    const intervalId = setInterval(() => {
+                        let nextSlide = (currentSlide + 1) % images.length;
+                        showSlide(nextSlide);
+                    }, 3000);
+                    slideshow.dataset.intervalId = intervalId;
+                });
+            }
+            
+            initTourSlideshows();
+            
+            // Quick View Modal - use card content for accuracy
+            const quickViewButtons = document.querySelectorAll('.quick-view-btn');
+            quickViewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.tour-card');
+                    if (!card) return;
+                    showQuickViewModalFromCard(card);
+                });
+            });
+            
+            function showQuickViewModalFromCard(card) {
+                const title = card.querySelector('h4')?.textContent?.trim() || 'Tour Details';
+                const price = card.querySelector('.tour-price')?.textContent?.trim() || '';
+                const duration = card.querySelector('.tour-duration')?.textContent?.trim() || '';
+                const description = card.querySelector('.text-muted')?.textContent?.trim() || '';
+                const images = Array.from(card.querySelectorAll('.tour-slideshow img')).map(img => img.getAttribute('src'));
+                const features = Array.from(card.querySelectorAll('.tour-features li')).map(li => li.textContent.trim()).filter(Boolean);
+                const bookingLink = card.querySelector('.book-now-btn')?.getAttribute('href') || '#booking';
+                const bookingService = card.querySelector('.book-now-btn')?.dataset.service || card.querySelector('.quick-view-btn')?.dataset.tour || '';
+                const bookingServiceAttr = bookingService ? ` data-service="${bookingService}"` : '';
+
+                const slideshowHTML = images.map((src, index) => {
+                    return `<img src="${src}" class="${index === 0 ? 'active' : ''}" alt="${title} image ${index + 1}">`;
+                }).join('');
+                
+                const dotsHTML = images.length > 1 ? images.map((_, index) => 
+                    `<div class="modal-slide-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></div>`
+                ).join('') : '';
+                
+                const featuresHTML = features.length ? `
+                    <div class="modal-features-grid">
+                        ${features.map(item => `
+                            <div class="modal-feature-item">
+                                <div class="modal-feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>${item}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '';
+                
+                const modalHTML = `
+                    <div class="modal fade quick-view-modal" id="quickViewModal" tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">${title}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Slideshow Section -->
+                                    <div class="modal-slideshow-container">
+                                        <div class="modal-slideshow" id="modalSlideshow">
+                                            ${slideshowHTML}
+                                        </div>
+                                        ${dotsHTML ? `<div class="modal-slideshow-controls">${dotsHTML}</div>` : ''}
+                                    </div>
+                                    
+                                    <!-- Tour Details -->
+                                    <div class="modal-tour-details">
+                                        ${(price || duration) ? `
+                                        <div class="modal-price-badge">
+                                            <div class="modal-price">${price}</div>
+                                            <div class="modal-duration">${duration}</div>
+                                        </div>` : ''}
+                                        
+                                        ${description ? `<p class="mb-4">${description}</p>` : ''}
+                                        
+                                        ${featuresHTML}
+                                        
+                                        <div class="modal-footer-actions">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="flex: 1;">
+                                                <i class="fas fa-times me-2"></i> Close
+                                            </button>
+                                            <a href="${bookingLink}" class="btn btn-primary-custom" data-bs-dismiss="modal" style="flex: 2;"${bookingServiceAttr}>
+                                                <i class="far fa-calendar-alt me-2"></i> Book This Tour
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                const modalContainer = document.createElement('div');
+                modalContainer.innerHTML = modalHTML;
+                document.body.appendChild(modalContainer);
+                
+                // Initialize modal slideshow
+                const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+                modal.show();
+                
+                // Set up modal slideshow functionality
+                const modalSlideshow = document.querySelector('#modalSlideshow');
+                const modalDots = modalSlideshow?.parentElement?.querySelectorAll('.modal-slide-dot');
+                const modalImages = modalSlideshow?.querySelectorAll('img');
+                
+                if (modalSlideshow && modalDots && modalImages && modalImages.length > 1) {
+                    let currentModalSlide = 0;
+                    
+                    function showModalSlide(index) {
+                        modalImages.forEach(img => {
+                            img.classList.remove('active');
+                            img.style.opacity = '0';
+                        });
+                        
+                        modalDots.forEach(dot => dot.classList.remove('active'));
+                        
+                        modalImages[index].classList.add('active');
+                        modalImages[index].style.opacity = '1';
+                        if (modalDots[index]) {
+                            modalDots[index].classList.add('active');
+                        }
+                        currentModalSlide = index;
+                    }
+                    
+                    modalDots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => showModalSlide(index));
+                    });
+                    
+                    // Auto-rotate modal slideshow every 3 seconds
+                    const modalInterval = setInterval(() => {
+                        let nextSlide = (currentModalSlide + 1) % modalImages.length;
+                        showModalSlide(nextSlide);
+                    }, 3000);
+                    
+                    // Clear interval when modal is hidden
+                    document.getElementById('quickViewModal').addEventListener('hidden.bs.modal', function() {
+                        clearInterval(modalInterval);
+                        modalContainer.remove();
+                    });
+                } else {
+                    document.getElementById('quickViewModal').addEventListener('hidden.bs.modal', function() {
+                        modalContainer.remove();
+                    });
+                }
+            }
+            
+            // Initialize FullCalendar
+            const calendarEl = document.getElementById('calendar');
+            if (calendarEl) {
+                const googleCalendarId = 'YOUR_GOOGLE_CALENDAR_ID';
+                const googleCalendarApiKey = 'YOUR_GOOGLE_API_KEY';
+                const hasGoogleCalendar = !googleCalendarId.includes('YOUR_') && !googleCalendarApiKey.includes('YOUR_');
+                const selectedDates = new Set();
+                const selectedDatesList = document.getElementById('selectedDatesList');
+                const pickupDatesInput = document.getElementById('pickupDates');
+
+                function updateSelectedDatesUI() {
+                    const dates = Array.from(selectedDates).sort();
+                    if (pickupDatesInput) {
+                        pickupDatesInput.value = dates.join(', ');
+                    }
+                    if (selectedDatesList) {
+                        selectedDatesList.textContent = dates.length
+                            ? `Selected dates: ${dates.join(', ')}`
+                            : 'Selected dates: none';
+                    }
+                }
+
+                const calendarOptions = {
+                    initialView: 'dayGridMonth',
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek'
+                    },
+                    height: 'auto',
+                    dayCellDidMount: function(info) {
+                        info.el.setAttribute('data-date', info.dateStr);
+                        if (selectedDates.has(info.dateStr)) {
+                            info.el.classList.add('selected-date');
+                        }
+                    },
+                    dateClick: function(info) {
+                        const dateInput = document.getElementById('pickupDate');
+                        if (dateInput) {
+                            dateInput.value = info.dateStr;
+                        }
+                        
+                        if (selectedDates.has(info.dateStr)) {
+                            selectedDates.delete(info.dateStr);
+                            info.dayEl.classList.remove('selected-date');
+                        } else {
+                            selectedDates.add(info.dateStr);
+                            info.dayEl.classList.add('selected-date');
+                        }
+                        updateSelectedDatesUI();
+                    }
+                };
+
+                if (hasGoogleCalendar) {
+                    calendarOptions.googleCalendarApiKey = googleCalendarApiKey;
+                    calendarOptions.eventSources = [
+                        {
+                            googleCalendarId: googleCalendarId,
+                            display: 'background',
+                            color: 'rgba(231, 76, 60, 0.25)'
+                        }
+                    ];
+                } else {
+                    calendarOptions.events = [
+                        {
+                            title: 'Available',
+                            start: new Date(),
+                            end: new Date(new Date().setDate(new Date().getDate() + 60)),
+                            display: 'background',
+                            color: 'rgba(46, 204, 113, 0.2)'
+                        },
+                        {
+                            title: 'Booked',
+                            start: new Date(new Date().setDate(new Date().getDate() + 2)),
+                            color: 'var(--accent)'
+                        },
+                        {
+                            title: 'Available',
+                            start: new Date(new Date().setDate(new Date().getDate() + 3)),
+                            color: '#2ecc71'
+                        },
+                        {
+                            title: 'Booked',
+                            start: new Date(new Date().setDate(new Date().getDate() + 5)),
+                            color: 'var(--accent)'
+                        }
+                    ];
+                }
+
+                const calendar = new FullCalendar.Calendar(calendarEl, calendarOptions);
+                calendar.render();
+                updateSelectedDatesUI();
+            }
+            
+            // Enhanced Price calculation for all services
+            const tourPackageSelect = document.getElementById('tourPackage');
+            const quickServiceSelect = document.getElementById('quickServiceSelect');
+            const contactServiceSelect = document.getElementById('contactService');
+            const passengersSelect = document.getElementById('passengers');
+            const priceDisplay = document.getElementById('priceDisplay');
+            
+            // Price map for all services
+            const priceMap = {
+                // Airport & City Transfers
+                'airport': 350,
+                'hotel': 300,
+                'corporate': 400,
+                'event': 500,
+                
+                // Day Tours
+                'city': 850,
+                'peninsula': 1250,
+                'hermanus': 1100,
+                'tablemountain': 900,
+                
+                // Winelands Tours
+                'winelands': 1450,
+                'franschhoek': 1650,
+                'paarl': 1350,
+                
+                // Multi-Day Tours
+                'garden3': 4800,
+                'garden5': 7200,
+                'winelands2': 2800,
+                
+                // Adventure Tours
+                'helicopter': 2800,
+                'shark': 2200,
+                'quad': 1800,
+                
+                // Wildlife & Safari
+                'safari': 3500,
+                'wildlife': 1500,
+                
+                // Custom
+                'custom': 0
+            };
+            
+            function updatePrice() {
+                let basePrice = 0;
+                let tour = '';
+                
+                // Check which select has a value
+                if (tourPackageSelect && tourPackageSelect.value && priceMap[tourPackageSelect.value] !== undefined) {
+                    basePrice = priceMap[tourPackageSelect.value];
+                    tour = tourPackageSelect.value;
+                } else if (quickServiceSelect && quickServiceSelect.value && priceMap[quickServiceSelect.value] !== undefined) {
+                    basePrice = priceMap[quickServiceSelect.value];
+                    tour = quickServiceSelect.value;
+                }
+                
+                if (basePrice > 0 && tour !== 'custom') {
+                    const passengers = parseInt(passengersSelect.value) || 1;
+                    let total = basePrice * passengers;
+                    
+                    // Apply discounts for groups
+                    if (passengers >= 4) total *= 0.9; // 10% off for 4+
+                    else if (passengers >= 2) total *= 0.95; // 5% off for 2-3
+                    
+                    priceDisplay.textContent = `Estimated Total: R${total.toFixed(0)}`;
+                } else if (tour === 'custom') {
+                    priceDisplay.textContent = `Custom Quote Required`;
+                }
+            }
+            
+            if (tourPackageSelect && passengersSelect) {
+                tourPackageSelect.addEventListener('change', updatePrice);
+                passengersSelect.addEventListener('change', updatePrice);
+            }
+            
+            if (quickServiceSelect) {
+                quickServiceSelect.addEventListener('change', updatePrice);
+            }
+
+            const quickBookingForm = document.getElementById('quickBookingForm');
+            const quickServiceLabel = document.getElementById('quickServiceLabel');
+            const tourPackageLabel = document.getElementById('tourPackageLabel');
+            const contactServiceLabel = document.getElementById('contactServiceLabel');
+
+            function syncSelectLabel(selectEl, hiddenEl) {
+                if (!selectEl || !hiddenEl) return;
+                const selectedOption = selectEl.options[selectEl.selectedIndex];
+                hiddenEl.value = selectedOption ? selectedOption.text : '';
+            }
+
+            if (quickServiceSelect && quickServiceLabel) {
+                quickServiceSelect.addEventListener('change', () => syncSelectLabel(quickServiceSelect, quickServiceLabel));
+                syncSelectLabel(quickServiceSelect, quickServiceLabel);
+            }
+
+            if (tourPackageSelect && tourPackageLabel) {
+                tourPackageSelect.addEventListener('change', () => syncSelectLabel(tourPackageSelect, tourPackageLabel));
+                syncSelectLabel(tourPackageSelect, tourPackageLabel);
+            }
+
+            if (contactServiceSelect && contactServiceLabel) {
+                contactServiceSelect.addEventListener('change', () => syncSelectLabel(contactServiceSelect, contactServiceLabel));
+                syncSelectLabel(contactServiceSelect, contactServiceLabel);
+            }
+
+            if (quickBookingForm && quickServiceSelect && quickServiceLabel) {
+                quickBookingForm.addEventListener('submit', function() {
+                    syncSelectLabel(quickServiceSelect, quickServiceLabel);
+                });
+            }
+
+            const fullBookingForm = document.getElementById('fullBookingForm');
+            if (fullBookingForm && tourPackageSelect && tourPackageLabel) {
+                fullBookingForm.addEventListener('submit', function() {
+                    syncSelectLabel(tourPackageSelect, tourPackageLabel);
+                });
+            }
+
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm && contactServiceSelect && contactServiceLabel) {
+                contactForm.addEventListener('submit', function() {
+                    syncSelectLabel(contactServiceSelect, contactServiceLabel);
+                });
+            }
+
+            const serviceAliasMap = {
+                garden: 'garden3',
+                stellenbosch: 'winelands'
+            };
+
+            function resolveService(value) {
+                if (!value) return '';
+                const normalized = value.toString().trim().toLowerCase();
+                return serviceAliasMap[normalized] || normalized;
+            }
+
+            function setBookingService(serviceValue) {
+                if (!tourPackageSelect) return;
+                const resolved = resolveService(serviceValue);
+                const optionExists = tourPackageSelect.querySelector(`option[value="${resolved}"]`);
+                if (optionExists) {
+                    tourPackageSelect.value = resolved;
+                } else if (tourPackageSelect.querySelector('option[value="custom"]')) {
+                    tourPackageSelect.value = 'custom';
+                }
+                syncSelectLabel(tourPackageSelect, tourPackageLabel);
+                updatePrice();
+            }
+
+            document.addEventListener('click', (event) => {
+                const bookNowLink = event.target.closest('a.book-now-btn[data-service]');
+                if (!bookNowLink) return;
+                setBookingService(bookNowLink.dataset.service);
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const preselectService = urlParams.get('tour') || urlParams.get('service');
+            if (preselectService) {
+                setBookingService(preselectService);
+            }
+            
+            // Initialize price
+            updatePrice();
+            
+            // Form submission
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    if (form.id === 'quickBookingForm' || form.id === 'fullBookingForm' || form.id === 'contactForm') {
+                        return;
+                    }
+                    e.preventDefault();
+                    
+                    // Get selected service
+                    let serviceName = '';
+                    let servicePrice = '';
+                    
+                    if (form.id === 'fullBookingForm') {
+                        const selectedOption = tourPackageSelect.options[tourPackageSelect.selectedIndex];
+                        serviceName = selectedOption.text.split(' - ')[0];
+                        servicePrice = selectedOption.text.split(' - ')[1] || '';
+                    } else if (form.id === 'quickBookingForm') {
+                        const selectedOption = quickServiceSelect.options[quickServiceSelect.selectedIndex];
+                        serviceName = selectedOption.text.split(' - ')[0];
+                        servicePrice = selectedOption.text.split(' - ')[1] || '';
+                    }
+                    
+                    // Show success message
+                    const modalHTML = `
+                        <div class="modal fade" id="successModal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title text-success"><i class="fas fa-check-circle me-2"></i> Success!</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body text-center py-4">
+                                        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                                        <h4 class="mb-3">Thank You!</h4>
+                                        <p>Your booking request for <strong>${serviceName}</strong> has been received.</p>
+                                        ${servicePrice ? `<p><strong>${servicePrice}</strong></p>` : ''}
+                                        <p class="small text-muted">We'll contact you within 2 hours to confirm.</p>
+                                    </div>
+                                    <div class="modal-footer border-0 justify-content-center">
+                                        <button type="button" class="btn btn-primary-custom" data-bs-dismiss="modal">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    const modalContainer = document.createElement('div');
+                    modalContainer.innerHTML = modalHTML;
+                    document.body.appendChild(modalContainer);
+                    
+                    const modal = new bootstrap.Modal(document.getElementById('successModal'));
+                    modal.show();
+                    
+                    this.reset();
+                    updatePrice();
+                    
+                    document.getElementById('successModal').addEventListener('hidden.bs.modal', function() {
+                        modalContainer.remove();
+                    });
+                });
+            });
+            
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        
+                        // Only activate if it's a section link (not external)
+                        if (this.getAttribute('href').startsWith('#')) {
+                            this.classList.add('active');
+                        }
+                    }
+                });
+            });
+            
+            // Set minimum date for booking
+            const today = new Date().toISOString().split('T')[0];
+            const dateInputs = document.querySelectorAll('input[type="date"]');
+            dateInputs.forEach(input => {
+                input.min = today;
+            });
+            
+            // Animate cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.tour-card, .service-card, .explore-feature').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

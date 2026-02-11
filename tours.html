@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Tour Packages | ONYX Shuttle &amp; Tour Services</title>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --gold: #e6b325;
+            --light: #f5f5f5;
+            --gray: #eaeaea;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-top: 70px; /* Added for fixed nav */
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Enhanced Header from index.html */
+        .navbar {
+            background: #000;
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-dark .navbar-toggler {
+            border-color: var(--gold);
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(230,179,37,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-image-container {
+            width: 160px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: none;
+            border: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+        
+        .logo-image-container::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: none;
+            border-radius: 10px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .logo-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-image-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+        
+        .logo-tagline {
+            font-size: 0.85rem;
+            color: #fff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        /* Enhanced Navigation */
+        .nav-link {
+            color: #000 !important;
+            background: var(--gold);
+            font-weight: 600;
+            padding: 8px 16px !important;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #000 !important;
+            background: #d19c1f;
+        }
+
+        .navbar .navbar-nav {
+            gap: 12px;
+        }
+
+        .navbar-collapse .navbar-nav {
+            gap: 12px;
+            padding-top: 12px;
+        }
+
+        .navbar .btn-primary-custom {
+            background-color: var(--gold);
+            color: #000;
+        }
+
+        .navbar .btn-primary-custom:hover {
+            background-color: #d19c1f;
+            color: #000;
+        }
+        
+        /* Tour Button with Tag */
+        .tour-nav-item {
+            position: relative;
+        }
+        
+        .tour-tag {
+            position: absolute;
+            top: -8px;
+            right: -5px;
+            background: var(--gold);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--gold);
+            border: none;
+            color: var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #d19c1f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary-custom {
+            background-color: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 28px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: var(--gold);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* WhatsApp & Email Floaters from index.html */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .email-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background-color: #000;
+            color: var(--gold);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .email-float:hover {
+            background-color: #111;
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+        }
+        
+        /* Hero Banner */
+        .hero-banner {
+            background: url('assets/img/tours/all-tours/cape-peninsula-3.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 80px;
+            position: relative;
+            text-align: center;
+            margin-top: -70px; /* Offset for fixed nav */
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6b325' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-banner > .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* PDF Download Banner */
+        .pdf-download-banner {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pdf-download-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pdf-download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: #d19c1f;
+            color: var(--primary);
+        }
+        
+        .pdf-download-btn i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        /* Vehicle Showcase */
+        .vehicle-showcase {
+            background: var(--light);
+            padding: 50px 0;
+        }
+        
+        .vehicle-video-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            border: 5px solid white;
+        }
+        
+        .vehicle-video-container video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .vehicle-details {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-top: 20px;
+        }
+        
+        /* Tour Categories Tabs */
+        .categories-tabs {
+            background: white;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .nav-tabs-custom {
+            border: none;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tabs-custom .nav-link {
+            border: 2px solid transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 12px 25px;
+            margin: 0 5px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-tabs-custom .nav-link:hover {
+            border-color: var(--gold);
+            background: rgba(230, 179, 37, 0.1);
+        }
+        
+        .nav-tabs-custom .nav-link.active {
+            background: var(--gold);
+            color: var(--primary);
+            border-color: var(--gold);
+        }
+        
+        /* Tour Packages Section */
+        .packages-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .category-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        /* Tour Card - MATCHING index.html STYLE */
+        .tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tour-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 2;
+        }
+        
+        .tour-slideshow {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tour-slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+        
+        .tour-slideshow img:not(.active) {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .slideshow-controls {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .slide-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slide-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .tour-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tour-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .tour-price {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .tour-duration {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .tour-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+        
+        .tour-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .tour-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        .tour-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .quick-view-btn {
+            flex: 1;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .quick-view-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .book-now-btn {
+            flex: 1;
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .book-now-btn:hover {
+            background: #d19c1f;
+            transform: translateY(-2px);
+            color: var(--primary);
+        }
+        
+        /* Center cards in grid */
+        .tour-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        /* Centered card container */
+        .card-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Ensure cards are equal height */
+        .tour-card .tour-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            filter: invert(1);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(230, 179, 37, 0.25);
+            border-color: var(--gold);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer with Logo from index.html */
+        footer {
+            background-color: #000;
+            color: var(--gold);
+            padding: 70px 0 20px;
+        }
+        
+        .footer-logo-container {
+            width: 120px;
+            height: 90px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: none;
+            margin-bottom: 20px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .footer-logo-container img,
+        .footer-logo-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--gold);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links h5 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--gold);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gold);
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .tour-cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .page-title {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .packages-section, .faq-section, .cta-section {
+                padding: 70px 0;
+            }
+            
+            .logo-image-container {
+                width: 130px;
+                height: 100px;
+            }
+            
+            .vehicle-video-container video {
+                height: 250px;
+            }
+            
+            .whatsapp-float, .email-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: calc(16px + env(safe-area-inset-bottom));
+                right: calc(16px + env(safe-area-inset-right));
+            }
+            
+            .email-float {
+                bottom: calc(78px + env(safe-area-inset-bottom));
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-banner {
+                background: linear-gradient(rgba(10, 10, 30, 0.85), rgba(10, 10, 30, 0.9)), url('assets/img/tours/all-tours/cape-peninsula-3.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .tour-actions {
+                flex-direction: column;
+            }
+            
+            .vehicle-video-container video {
+                height: 200px;
+            }
+            
+            .tour-tag {
+                top: -5px;
+                right: 0;
+                font-size: 0.6rem;
+                padding: 1px 4px;
+            }
+            
+            .nav-tabs-custom {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .nav-tabs-custom .nav-item {
+                width: 100%;
+            }
+
+            .nav-tabs-custom .nav-link {
+                width: 100%;
+                padding: 12px 10px;
+                margin: 0;
+                font-size: 0.9rem;
+                line-height: 1.2;
+                text-align: center;
+                white-space: normal;
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .hero-banner {
+                margin-top: -60px;
+                padding: 120px 0 60px;
+            }
+            
+            .vehicle-video-container video {
+                height: 180px;
+            }
+            
+            .tour-tag {
+                display: none;
+            }
+            
+            .logo-image-container {
+                width: 120px;
+                height: 90px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-float, .email-float {
+                bottom: calc(90px + env(safe-area-inset-bottom));
+                right: calc(16px + env(safe-area-inset-right));
+            }
+
+            .email-float {
+                bottom: calc(150px + env(safe-area-inset-bottom));
+            }
+            
+            .tour-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs-custom {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- WhatsApp Float Button -->
+<a class="whatsapp-float" href="https://wa.me/27739163011?text=Hi%20ONYX%20Tours,%20I'm%20interested%20in%20your%20tour%20packages" target="_blank" title="Chat on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- Email Float Button -->
+<a class="email-float" href="mailto:info@onyxtours.co.za?subject=Tour%20Package%20Inquiry" title="Send Email">
+<i class="far fa-envelope"></i>
+</a>
+<!-- Enhanced Navigation from index.html -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<div class="logo-container">
+<div class="logo-image-container">
+<video aria-label="ONYX logo animation" autoplay="" class="logo-video" loop="" muted="" playsinline="">
+<source src="assets/img/ONYX_logo_animation_2.mp4" type="video/mp4">
+</source></video>
+</div>
+</div>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fas fa-home me-2"></i>Home
+                        </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#services">
+<i class="fas fa-concierge-bell me-2"></i>Services
+                        </a>
+</li>
+<li class="nav-item tour-nav-item">
+<a class="nav-link active" href="tours.html">
+<i class="fas fa-map-marked-alt me-2"></i>Tours
+                            <span class="tour-tag">12+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#booking">
+<i class="far fa-calendar-alt me-2"></i>Booking
+                        </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#contact">
+<i class="fas fa-headset me-2"></i>Contact
+                        </a>
+</li>
+<li class="nav-item ms-lg-3">
+<a class="btn btn-primary-custom" href="tel:0610268025">
+<i class="fas fa-phone-alt me-2"></i> 061 026 8025
+                        </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Hero Banner -->
+<section class="hero-banner">
+<div class="container">
+<h1 class="page-title">All Tour Packages</h1>
+<p class="page-subtitle">Explore Cape Town and the Garden Route in comfort with our full range of private luxury tours. From iconic city highlights to scenic coastal drives and cultural experiences, all tours are chauffeur-guided and fully customisable.</p>
+<div class="d-flex flex-wrap gap-3 justify-content-center">
+<a class="btn btn-primary-custom" href="index.html#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                </a>
+<a class="btn btn-secondary-custom" href="index.html#contact">
+<i class="fas fa-headset me-2"></i> Contact Us
+                </a>
+</div>
+</div>
+</section>
+<!-- PDF Download Banner -->
+<section class="pdf-download-banner">
+<div class="container position-relative">
+<h3><i class="fas fa-file-pdf me-2"></i> Download Our Complete Price Guide</h3>
+<p class="mb-0">Get detailed pricing for all our luxury tours and transfer services in one convenient PDF.</p>
+<a class="pdf-download-btn" download="ONYX-Price-List.jpg" href="content/updated-price-list.jpg" id="downloadPdfBtn" target="_blank">
+<i class="fas fa-download"></i> Download Price Guide (PDF)
+            </a>
+</div>
+</section>
+<!-- Vehicle Showcase -->
+<section class="vehicle-showcase">
+<div class="container">
+<div class="section-title">
+<h2>Executive Transport</h2>
+<p class="mt-3">Immaculate vehicles and professional chauffeurs for a refined, private journey.</p>
+</div>
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4">
+<div class="vehicle-video-container">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="assets/img/Staria_driving.mp4" type="video/mp4">
+<img alt="Executive shuttle driving" src="https://images.unsplash.com/photo-1621330396175-92a4348e0a4b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+</source></video>
+</div>
+<p class="text-center small text-muted">Executive shuttle - City driving</p>
+</div>
+<div class="col-lg-6 mb-4">
+<div class="vehicle-video-container">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="assets/img/Staria_driving_2.mp4" type="video/mp4">
+<img alt="Executive shuttle scenic" src="https://images.unsplash.com/photo-1621330396140-8dff8e8d8c8a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+</source></video>
+</div>
+<p class="text-center small text-muted">Executive shuttle - Scenic routes</p>
+</div>
+</div>
+<div class="vehicle-details">
+<div class="row">
+<div class="col-md-4 text-center">
+<i class="fas fa-user-friends fa-3x mb-3" style="color: var(--accent);"></i>
+<h5>Comfort-Focused Interiors</h5>
+<p class="small">Designed for relaxed, private travel</p>
+</div>
+<div class="col-md-4 text-center">
+<i class="fas fa-wifi fa-3x mb-3" style="color: var(--accent);"></i>
+<h5>Discreet Service</h5>
+<p class="small">Professional chauffeurs with a privacy-first approach</p>
+</div>
+<div class="col-md-4 text-center">
+<i class="fas fa-snowflake fa-3x mb-3" style="color: var(--accent);"></i>
+<h5>Professional Standards</h5>
+<p class="small">Clean, well-presented vehicles and punctual service</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tour Categories Tabs -->
+<section class="categories-tabs">
+<div class="container">
+<ul class="nav nav-tabs nav-tabs-custom" id="tourTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button class="nav-link active" data-bs-target="#all-tours" data-bs-toggle="tab" id="all-tours-tab" role="tab" type="button">All Tours</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-target="#day-tours" data-bs-toggle="tab" id="day-tours-tab" role="tab" type="button">Day Tours</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-target="#multi-day" data-bs-toggle="tab" id="multi-day-tab" role="tab" type="button">Multi-Day Tours</button>
+</li><li class="nav-item" role="presentation"><button class="nav-link" data-bs-target="#wine-tours" data-bs-toggle="tab" id="wine-tours-tab" role="tab" type="button">Wine Tours</button></li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-target="#adventure" data-bs-toggle="tab" id="adventure-tab" role="tab" type="button">Adventure</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-target="#wildlife" data-bs-toggle="tab" id="wildlife-tab" role="tab" type="button">Wildlife</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" data-bs-target="#transfers" data-bs-toggle="tab" id="transfers-tab" role="tab" type="button">Transfers</button>
+</li>
+</ul>
+</div>
+</section>
+<!-- Tour Packages Section -->
+<section class="packages-section">
+<div class="container">
+<div class="tab-content" id="tourTabsContent">
+<!-- All Tours Tab -->
+<div class="tab-pane fade show active" id="all-tours" role="tabpanel">
+<div class="section-title">
+<h2>All Tours</h2>
+</div>
+<p class="category-description">Explore Cape Town and the Garden Route in comfort with our full range of private luxury tours. From iconic city highlights to scenic coastal drives and cultural experiences, all tours are chauffeur-guided and fully customisable.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Most Popular</div>
+<div class="tour-slideshow">
+<img alt="Cape Peninsula &amp; Cape of Good Hope" class="active" src="assets/img/tours/cards/01-cape-peninsula-cape-of-good-hope/image-1.jpg"/>
+<img alt="Cape Peninsula &amp; Cape of Good Hope" class="" src="assets/img/tours/cards/01-cape-peninsula-cape-of-good-hope/image-2.jpg"/>
+<img alt="Cape Peninsula &amp; Cape of Good Hope" class="" src="assets/img/tours/cards/01-cape-peninsula-cape-of-good-hope/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,250 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 8-10 hours</div>
+</div>
+<h4>Cape Peninsula &amp; Cape of Good Hope</h4>
+<p class="text-muted">Full-day luxury tour along the stunning Cape Peninsula coastline.</p>
+<ul class="tour-features">
+<li>Cape Point &amp; Cape of Good Hope</li>
+<li>Boulders Beach Penguin Colony</li>
+<li>Chapman's Peak Drive</li>
+<li>Gourmet picnic lunch included</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="peninsula">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="peninsula" href="index.html?tour=peninsula#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Wine Special</div>
+<div class="tour-slideshow">
+<img alt="Stellenbosch &amp; Franschhoek Winelands" class="active" src="assets/img/tours/cards/02-stellenbosch-franschhoek-winelands/image-1.jpg"/>
+<img alt="Stellenbosch &amp; Franschhoek Winelands" class="" src="assets/img/tours/cards/02-stellenbosch-franschhoek-winelands/image-2.jpg"/>
+<img alt="Stellenbosch &amp; Franschhoek Winelands" class="" src="assets/img/tours/cards/02-stellenbosch-franschhoek-winelands/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,450 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 7-9 hours</div>
+</div>
+<h4>Stellenbosch &amp; Franschhoek Winelands</h4>
+<p class="text-muted">Experience world-class wines and breathtaking scenery.</p>
+<ul class="tour-features">
+<li>4 premium wine estate visits</li>
+<li>Wine tasting sessions</li>
+<li>Gourmet lunch included</li>
+<li>Scenic vineyard tours</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="winelands">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="winelands" href="index.html?tour=winelands#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Adventure</div>
+<div class="tour-slideshow">
+<img alt="Garden Route Adventure" class="active" src="assets/img/tours/cards/03-garden-route-adventure/image-1.jpg"/>
+<img alt="Garden Route Adventure" class="" src="assets/img/tours/cards/03-garden-route-adventure/image-2.jpg"/>
+<img alt="Garden Route Adventure" class="" src="assets/img/tours/cards/03-garden-route-adventure/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R4,800 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 3-5 days</div>
+</div>
+<h4>Garden Route Adventure</h4>
+<p class="text-muted">Multi-day adventure along the scenic Garden Route.</p>
+<ul class="tour-features">
+<li>Knysna &amp; Plettenberg Bay</li>
+<li>Tsitsikamma National Park</li>
+<li>Wildlife encounters &amp; safaris</li>
+<li>Luxury accommodations included</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="garden">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="garden" href="index.html?tour=garden#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Day Tours Tab -->
+<div class="tab-pane fade" id="day-tours" role="tabpanel">
+<div class="section-title">
+<h2>Day Tours</h2>
+</div>
+<p class="category-description">Our private day tours are designed for travellers who want to experience the best in a single day without feeling rushed.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Peninsula</div>
+<div class="tour-slideshow">
+<img alt="Cape Point &amp; Peninsula Tour" class="active" src="assets/img/tours/cards/04-cape-point-peninsula-tour/image-1.webp"/>
+<img alt="Cape Point &amp; Peninsula Tour" class="" src="assets/img/tours/cards/04-cape-point-peninsula-tour/image-2.jpg"/>
+<img alt="Cape Point &amp; Peninsula Tour" class="" src="assets/img/tours/cards/04-cape-point-peninsula-tour/image-3.jpg"/>
+<img alt="Cape Point &amp; Peninsula Tour" class="" src="assets/img/tours/cards/04-cape-point-peninsula-tour/image-4.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+<div class="slide-dot" data-slide="3"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,250 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 8-10 hours</div>
+</div>
+<h4>Cape Point &amp; Peninsula Tour</h4>
+<p class="text-muted">Full-day luxury tour along the stunning Cape Peninsula coastline.</p>
+<ul class="tour-features">
+<li>Cape Point &amp; Cape of Good Hope</li>
+<li>Boulders Beach Penguin Colony</li>
+<li>Chapman's Peak Drive</li>
+<li>Scenic coastal viewpoints</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="peninsula">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="peninsula" href="index.html?tour=peninsula#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">City</div>
+<div class="tour-slideshow">
+<img alt="Table Mountain &amp; City Tour" class="active" src="assets/img/tours/cards/05-table-mountain-city-tour/image-1.jpg"/>
+<img alt="Table Mountain &amp; City Tour" class="" src="assets/img/tours/cards/05-table-mountain-city-tour/image-2.jpg"/>
+<img alt="Table Mountain &amp; City Tour" class="" src="assets/img/tours/cards/05-table-mountain-city-tour/image-3.jpg"/>
+<img alt="Table Mountain &amp; City Tour" class="" src="assets/img/tours/cards/05-table-mountain-city-tour/image-4.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+<div class="slide-dot" data-slide="3"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R850 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Table Mountain &amp; City Tour</h4>
+<p class="text-muted">Highlights of Cape Town with iconic city landmarks.</p>
+<ul class="tour-features">
+<li>Table Mountain Cableway</li>
+<li>Bo-Kaap &amp; City Bowl</li>
+<li>V&amp;A Waterfront</li>
+<li>Company's Garden</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="city">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="city" href="index.html?tour=city#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Winelands</div>
+<div class="tour-slideshow">
+<img alt="Cape Winelands Day Tour" class="active" src="assets/img/tours/cards/06-cape-winelands-day-tour/image-1.jpg"/>
+<img alt="Cape Winelands Day Tour" class="" src="assets/img/tours/cards/06-cape-winelands-day-tour/image-2.jpg"/>
+<img alt="Cape Winelands Day Tour" class="" src="assets/img/tours/cards/06-cape-winelands-day-tour/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,450 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 7-9 hours</div>
+</div>
+<h4>Cape Winelands Day Tour</h4>
+<p class="text-muted">A refined day tour through the Cape Winelands.</p>
+<ul class="tour-features">
+<li>Stellenbosch wine estates</li>
+<li>Franschhoek valley</li>
+<li>Wine tasting sessions</li>
+<li>Scenic vineyard drives</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="winelands">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="winelands" href="index.html?tour=winelands#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Coastal</div>
+<div class="tour-slideshow">
+<img alt="Hermanus Coastal Tour" class="active" src="assets/img/tours/cards/07-hermanus-coastal-tour/image-1.jpg"/>
+<img alt="Hermanus Coastal Tour" class="" src="assets/img/tours/cards/07-hermanus-coastal-tour/image-2.jpg"/>
+<img alt="Hermanus Coastal Tour" class="" src="assets/img/tours/cards/07-hermanus-coastal-tour/image-3.webp"/>
+<img alt="Hermanus Coastal Tour" class="" src="assets/img/tours/cards/07-hermanus-coastal-tour/image-4.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+<div class="slide-dot" data-slide="3"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,100 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Hermanus Coastal Tour</h4>
+<p class="text-muted">Coastal escape to Hermanus and the whale coast.</p>
+<ul class="tour-features">
+<li>Cliffside walks</li>
+<li>Scenic coastal views</li>
+<li>Local markets &amp; cafes</li>
+<li>Seasonal whale watching</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="hermanus">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="hermanus" href="index.html?tour=hermanus#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Multi-Day Tours Tab -->
+<div class="tab-pane fade" id="multi-day" role="tabpanel">
+<div class="section-title">
+<h2>Multi-Day Tours</h2>
+</div>
+<p class="category-description">Experience South Africa beyond the city with our bespoke multi-day tours.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Multi-Day</div>
+<div class="tour-slideshow">
+<img alt="Garden Route multi-day tour" class="active" src="assets/img/tours/cards/08-garden-route-multi-day-tour/image-1.jpg"/>
+<img alt="Garden Route multi-day tour" class="" src="assets/img/tours/cards/08-garden-route-multi-day-tour/image-2.jpg"/>
+<img alt="Garden Route multi-day tour" class="" src="assets/img/tours/cards/08-garden-route-multi-day-tour/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R4,800 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 3-5 days</div>
+</div>
+<h4>Garden Route multi-day tour</h4>
+<p class="text-muted">Multi-day adventure with top Garden Route highlights.</p>
+<ul class="tour-features">
+<li>Knysna lagoon</li>
+<li>Tsitsikamma forest</li>
+<li>Adventure activities</li>
+<li>Luxury stays</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="garden3">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="garden3" href="index.html?tour=garden3#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Escape</div>
+<div class="tour-slideshow">
+<img alt="Winelands &amp; coastal escapes" class="active" src="assets/img/tours/cards/09-winelands-coastal-escapes/image-1.jpg"/>
+<img alt="Winelands &amp; coastal escapes" class="" src="assets/img/tours/cards/09-winelands-coastal-escapes/image-2.jpg"/>
+<img alt="Winelands &amp; coastal escapes" class="" src="assets/img/tours/cards/09-winelands-coastal-escapes/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R2,800 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 2-3 days</div>
+</div>
+<h4>Winelands &amp; coastal escapes</h4>
+<p class="text-muted">A relaxed multi-day mix of wine and coast.</p>
+<ul class="tour-features">
+<li>Winelands tastings</li>
+<li>Coastal towns</li>
+<li>Gourmet dining</li>
+<li>Custom itinerary</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="winelands2">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="winelands2" href="index.html?tour=winelands2#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Long-Distance</div>
+<div class="tour-slideshow">
+<img alt="Cape Town to Eastern Cape routes" class="active" src="assets/img/tours/cards/10-cape-town-to-eastern-cape-routes/image-1.jpg"/>
+<img alt="Cape Town to Eastern Cape routes" class="" src="assets/img/tours/cards/10-cape-town-to-eastern-cape-routes/image-2.jpg"/>
+<img alt="Cape Town to Eastern Cape routes" class="" src="assets/img/tours/cards/10-cape-town-to-eastern-cape-routes/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">Custom Quote</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Multi-day</div>
+</div>
+<h4>Cape Town to Eastern Cape routes</h4>
+<p class="text-muted">Private long-distance routes tailored to your schedule.</p>
+<ul class="tour-features">
+<li>Flexible routing</li>
+<li>Luxury transport</li>
+<li>Stops &amp; activities</li>
+<li>Door-to-door service</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="custom-east">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="custom" href="index.html?tour=custom#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Custom</div>
+<div class="tour-slideshow">
+<img alt="Custom long-distance itineraries" class="active" src="assets/img/tours/cards/11-custom-long-distance-itineraries/image-1.jpg"/>
+<img alt="Custom long-distance itineraries" class="" src="assets/img/tours/cards/11-custom-long-distance-itineraries/image-2.jpg"/>
+<img alt="Custom long-distance itineraries" class="" src="assets/img/tours/cards/11-custom-long-distance-itineraries/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">Custom Quote</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Multi-day</div>
+</div>
+<h4>Custom long-distance itineraries</h4>
+<p class="text-muted">Fully customized itineraries across regions.</p>
+<ul class="tour-features">
+<li>Personalized planning</li>
+<li>Luxury vehicle</li>
+<li>Guided experiences</li>
+<li>Flexible timing</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="custom">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="custom" href="index.html?tour=custom#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div><div class="tab-pane fade" id="wine-tours" role="tabpanel"><div class="section-title"><h2>Wine Tours</h2></div><p class="category-description">Enjoy a refined wine-tasting experience in the world-renowned Cape Winelands. Our private wine tours offer luxury transport, flexible timing, and a relaxed atmosphere.</p><div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Stellenbosch</div>
+<div class="tour-slideshow">
+<img alt="Stellenbosch Wine Estates" class="active" src="assets/img/tours/cards/12-stellenbosch-wine-estates/image-1.jpg"/>
+<img alt="Stellenbosch Wine Estates" class="" src="assets/img/tours/cards/12-stellenbosch-wine-estates/image-2.jpg"/>
+<img alt="Stellenbosch Wine Estates" class="" src="assets/img/tours/cards/12-stellenbosch-wine-estates/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,450 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Stellenbosch Wine Estates</h4>
+<p class="text-muted">Taste award-winning wines in Stellenbosch.</p>
+<ul class="tour-features">
+<li>Estate tastings</li>
+<li>Cellar tours</li>
+<li>Gourmet lunch</li>
+<li>Scenic vineyards</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="stellenbosch">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="winelands" href="index.html?tour=winelands#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Franschhoek</div>
+<div class="tour-slideshow">
+<img alt="Franschhoek Wine Tram" class="active" src="assets/img/tours/cards/13-franschhoek-wine-tram/image-1.jpg"/>
+<img alt="Franschhoek Wine Tram" class="" src="assets/img/tours/cards/13-franschhoek-wine-tram/image-2.jpg"/>
+<img alt="Franschhoek Wine Tram" class="" src="assets/img/tours/cards/13-franschhoek-wine-tram/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,650 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Franschhoek Wine Tram</h4>
+<p class="text-muted">Ride the iconic wine tram with curated tastings.</p>
+<ul class="tour-features">
+<li>Wine tram tickets</li>
+<li>Estate tastings</li>
+<li>Scenic valley views</li>
+<li>Gourmet stops</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="franschhoek">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="franschhoek" href="index.html?tour=franschhoek#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Paarl</div>
+<div class="tour-slideshow">
+<img alt="Paarl and boutique wineries" class="active" src="assets/img/tours/cards/14-paarl-and-boutique-wineries/image-1.jpg"/>
+<img alt="Paarl and boutique wineries" class="" src="assets/img/tours/cards/14-paarl-and-boutique-wineries/image-2.jpg"/>
+<img alt="Paarl and boutique wineries" class="" src="assets/img/tours/cards/14-paarl-and-boutique-wineries/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,350 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Paarl and boutique wineries</h4>
+<p class="text-muted">Boutique winery tastings in Paarl.</p>
+<ul class="tour-features">
+<li>Boutique wineries</li>
+<li>Small-group tastings</li>
+<li>Winemaker insights</li>
+<li>Scenic drives</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="paarl">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="paarl" href="index.html?tour=paarl#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Cellar</div>
+<div class="tour-slideshow">
+<img alt="Private cellar tastings" class="active" src="assets/img/tours/cards/15-private-cellar-tastings/image-1.jpg"/>
+<img alt="Private cellar tastings" class="" src="assets/img/tours/cards/15-private-cellar-tastings/image-2.jpg"/>
+<img alt="Private cellar tastings" class="" src="assets/img/tours/cards/15-private-cellar-tastings/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 6-8 hours</div>
+</div>
+<h4>Private cellar tastings</h4>
+<p class="text-muted">Exclusive cellar tastings with premium selections.</p>
+<ul class="tour-features">
+<li>Private cellar access</li>
+<li>Premium tastings</li>
+<li>Food pairings</li>
+<li>Luxury transport</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="cellar">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="winelands" href="index.html?tour=winelands#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div></div>
+<!-- Winefarm Tours Tab -->
+
+<!-- Adventure Tab -->
+<div class="tab-pane fade" id="adventure" role="tabpanel">
+<div class="section-title">
+<h2>Adventure Tours</h2>
+</div>
+<p class="category-description">Designed for travellers who seek excitement without compromising on comfort.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Scenic</div>
+<div class="tour-slideshow">
+<img alt="Scenic mountain and coastal drives" class="active" src="assets/img/tours/cards/16-scenic-mountain-and-coastal-drives/image-1.jpg"/>
+<img alt="Scenic mountain and coastal drives" class="" src="assets/img/tours/cards/16-scenic-mountain-and-coastal-drives/image-2.jpg"/>
+<img alt="Scenic mountain and coastal drives" class="" src="assets/img/tours/cards/16-scenic-mountain-and-coastal-drives/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R900 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 4-6 hours</div>
+</div>
+<h4>Scenic mountain and coastal drives</h4>
+<p class="text-muted">Scenic drives through iconic mountain passes and coastline.</p>
+<ul class="tour-features">
+<li>Mountain passes</li>
+<li>Coastal viewpoints</li>
+<li>Photo stops</li>
+<li>Flexible route</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="scenic-drive">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="tablemountain" href="index.html?tour=tablemountain#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Adventure</div>
+<div class="tour-slideshow">
+<img alt="Helicopter Rides &amp; Aerial Tours" class="active" src="assets/img/tours/cards/17-helicopter-rides-aerial-tours/image-1.jpg"/>
+<img alt="Helicopter Rides &amp; Aerial Tours" class="" src="assets/img/tours/cards/17-helicopter-rides-aerial-tours/image-2.jpg"/>
+<img alt="Helicopter Rides &amp; Aerial Tours" class="" src="assets/img/tours/cards/17-helicopter-rides-aerial-tours/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R2,800 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 1-2 hours</div>
+</div>
+<h4>Helicopter Rides &amp; Aerial Tours</h4>
+<p class="text-muted">Aerial sightseeing with luxury transfers.</p>
+<ul class="tour-features">
+<li>Helicopter flight</li>
+<li>Aerial coastal views</li>
+<li>Professional operators</li>
+<li>Transfers included</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="helicopter">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="helicopter" href="index.html?tour=helicopter#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Adventure</div>
+<div class="tour-slideshow">
+<img alt="Shark Cage Diving Transfers" class="active" src="assets/img/tours/cards/18-shark-cage-diving-transfers/image-1.jpg"/>
+<img alt="Shark Cage Diving Transfers" class="" src="assets/img/tours/cards/18-shark-cage-diving-transfers/image-2.jpg"/>
+<img alt="Shark Cage Diving Transfers" class="" src="assets/img/tours/cards/18-shark-cage-diving-transfers/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R2,200 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Full day</div>
+</div>
+<h4>Shark Cage Diving Transfers</h4>
+<p class="text-muted">Thrilling shark cage diving with premium transfers.</p>
+<ul class="tour-features">
+<li>Return transfers</li>
+<li>Flexible timing</li>
+<li>Safety briefing</li>
+<li>Ocean adventure</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="shark">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="shark" href="index.html?tour=shark#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Adventure</div>
+<div class="tour-slideshow">
+<img alt="Quad biking experiences" class="active" src="assets/img/tours/cards/19-quad-biking-experiences/image-1.jpg"/>
+<img alt="Quad biking experiences" class="" src="assets/img/tours/cards/19-quad-biking-experiences/image-2.jpg"/>
+<img alt="Quad biking experiences" class="" src="assets/img/tours/cards/19-quad-biking-experiences/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,800 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 3-5 hours</div>
+</div>
+<h4>Quad biking experiences</h4>
+<p class="text-muted">Off-road thrills with chauffeur-driven transport.</p>
+<ul class="tour-features">
+<li>Quad biking session</li>
+<li>Safety gear</li>
+<li>Scenic trails</li>
+<li>Transfers included</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="quad">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="quad" href="index.html?tour=quad#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Adventure</div>
+<div class="tour-slideshow">
+<img alt="Hiking, paragliding, and outdoor adventures" class="active" src="assets/img/tours/cards/20-hiking-paragliding-and-outdoor-adventures/image-1.jpg"/>
+<img alt="Hiking, paragliding, and outdoor adventures" class="" src="assets/img/tours/cards/20-hiking-paragliding-and-outdoor-adventures/image-2.jpg"/>
+<img alt="Hiking, paragliding, and outdoor adventures" class="" src="assets/img/tours/cards/20-hiking-paragliding-and-outdoor-adventures/image-3.jpg"/>
+<img alt="Hiking, paragliding, and outdoor adventures" class="" src="assets/img/tours/cards/20-hiking-paragliding-and-outdoor-adventures/image-4.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Half day</div>
+</div>
+<h4>Hiking, paragliding, and outdoor adventures</h4>
+<p class="text-muted">Outdoor experiences tailored to your pace.</p>
+<ul class="tour-features">
+<li>Guided hikes</li>
+<li>Paragliding options</li>
+<li>Scenic viewpoints</li>
+<li>Flexible itinerary</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="outdoor">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="custom" href="index.html?tour=custom#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Wildlife Tab -->
+<div class="tab-pane fade" id="wildlife" role="tabpanel">
+<div class="section-title">
+<h2>Wildlife &amp; Safari Tours</h2>
+</div>
+<p class="category-description">Get closer to nature with our private wildlife and safari-style tours.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Wildlife</div>
+<div class="tour-slideshow">
+<img alt="Big Five Game Reserves" class="active" src="assets/img/tours/cards/21-big-five-game-reserves/image-1.jpg"/>
+<img alt="Big Five Game Reserves" class="" src="assets/img/tours/cards/21-big-five-game-reserves/image-2.jpg"/>
+<img alt="Big Five Game Reserves" class="" src="assets/img/tours/cards/21-big-five-game-reserves/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R3,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Full day</div>
+</div>
+<h4>Big Five Game Reserves</h4>
+<p class="text-muted">Premium transfers to top Big Five reserves.</p>
+<ul class="tour-features">
+<li>Game reserve access</li>
+<li>Safari drive</li>
+<li>Luxury transport</li>
+<li>Expert guides</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="safari">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="safari" href="index.html?tour=safari#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Wildlife</div>
+<div class="tour-slideshow">
+<img alt="Private wildlife sanctuaries" class="active" src="assets/img/tours/cards/22-private-wildlife-sanctuaries/image-1.jpg"/>
+<img alt="Private wildlife sanctuaries" class="" src="assets/img/tours/cards/22-private-wildlife-sanctuaries/image-2.jpg"/>
+<img alt="Private wildlife sanctuaries" class="" src="assets/img/tours/cards/22-private-wildlife-sanctuaries/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Full day</div>
+</div>
+<h4>Private wildlife sanctuaries</h4>
+<p class="text-muted">Ethical wildlife encounters with private transport.</p>
+<ul class="tour-features">
+<li>Sanctuary visit</li>
+<li>Guided experience</li>
+<li>Comfortable transfers</li>
+<li>Flexible timing</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="wildlife">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="wildlife" href="index.html?tour=wildlife#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Safari</div>
+<div class="tour-slideshow">
+<img alt="Safari day trips and overnight routes" class="active" src="assets/img/tours/cards/23-safari-day-trips-and-overnight-routes/image-1.jpg"/>
+<img alt="Safari day trips and overnight routes" class="" src="assets/img/tours/cards/23-safari-day-trips-and-overnight-routes/image-2.jpg"/>
+<img alt="Safari day trips and overnight routes" class="" src="assets/img/tours/cards/23-safari-day-trips-and-overnight-routes/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R3,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 1-2 days</div>
+</div>
+<h4>Safari day trips and overnight routes</h4>
+<p class="text-muted">Extended safari routes with overnight options.</p>
+<ul class="tour-features">
+<li>Overnight stays</li>
+<li>Game drives</li>
+<li>Luxury lodges</li>
+<li>All transfers</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="safari-overnight">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="safari" href="index.html?tour=safari#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Family</div>
+<div class="tour-slideshow">
+<img alt="Family-friendly wildlife experiences" class="active" src="assets/img/tours/cards/24-family-friendly-wildlife-experiences/image-1.png"/>
+<img alt="Family-friendly wildlife experiences" class="" src="assets/img/tours/cards/24-family-friendly-wildlife-experiences/image-2.jpg"/>
+<img alt="Family-friendly wildlife experiences" class="" src="assets/img/tours/cards/24-family-friendly-wildlife-experiences/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R1,500 pp</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> Full day</div>
+</div>
+<h4>Family-friendly wildlife experiences</h4>
+<p class="text-muted">Safe, engaging wildlife experiences for all ages.</p>
+<ul class="tour-features">
+<li>Family-friendly sites</li>
+<li>Interactive experiences</li>
+<li>Comfortable transport</li>
+<li>Flexible schedule</li>
+</ul>
+<div class="tour-actions">
+<button class="quick-view-btn" data-tour="family-wildlife">
+<i class="far fa-eye me-2"></i> Quick View
+                                    </button>
+<a class="book-now-btn" data-service="wildlife" href="index.html?tour=wildlife#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div>
+<!-- Transfers Tab -->
+<div class="tab-pane fade" id="transfers" role="tabpanel">
+<div class="section-title">
+<h2>Executive Transfer Services</h2>
+</div>
+<p class="category-description">Our executive transfer services offer discreet, punctual, and professional transport.</p>
+<div class="tour-cards-grid"><div class="tour-card fade-in">
+<div class="tour-badge">Transfer</div>
+<div class="tour-slideshow">
+<img alt="Airport transfers (arrivals &amp; departures)" class="active" src="assets/img/tours/cards/25-airport-transfers-arrivals-departures/image-1.jpg"/>
+<img alt="Airport transfers (arrivals &amp; departures)" class="" src="assets/img/tours/cards/25-airport-transfers-arrivals-departures/image-2.webp"/>
+<img alt="Airport transfers (arrivals &amp; departures)" class="" src="assets/img/tours/cards/25-airport-transfers-arrivals-departures/image-3.jpg"/>
+<img alt="Airport transfers (arrivals &amp; departures)" class="" src="assets/img/tours/cards/25-airport-transfers-arrivals-departures/image-4.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+<div class="slide-dot" data-slide="3"></div>
+<div class="slide-dot" data-slide="3"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R350</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 30-60 mins</div>
+</div>
+<h4>Airport transfers (arrivals &amp; departures)</h4>
+<p class="text-muted">Meet-and-greet service with flight tracking.</p>
+<ul class="tour-features">
+<li>Flight monitoring</li>
+<li>Meet &amp; greet</li>
+<li>Luggage assistance</li>
+<li>On-time pickups</li>
+</ul>
+<div class="tour-actions">
+<a class="book-now-btn" data-service="airport" href="index.html?tour=airport#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Hotel</div>
+<div class="tour-slideshow">
+<img alt="Hotel and lodge transfers" class="active" src="assets/img/tours/cards/26-hotel-and-lodge-transfers/image-1.jpg"/>
+<img alt="Hotel and lodge transfers" class="" src="assets/img/tours/cards/26-hotel-and-lodge-transfers/image-2.jpg"/>
+<img alt="Hotel and lodge transfers" class="" src="assets/img/tours/cards/26-hotel-and-lodge-transfers/image-3.png"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R300</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> 30-60 mins</div>
+</div>
+<h4>Hotel and lodge transfers</h4>
+<p class="text-muted">Seamless door-to-door hotel transfers.</p>
+<ul class="tour-features">
+<li>Door-to-door service</li>
+<li>Flexible timing</li>
+<li>Comfort-focused vehicles</li>
+<li>Professional chauffeurs</li>
+</ul>
+<div class="tour-actions">
+<a class="book-now-btn" data-service="hotel" href="index.html?tour=hotel#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Corporate</div>
+<div class="tour-slideshow">
+<img alt="Corporate and executive travel" class="active" src="assets/img/tours/cards/27-corporate-and-executive-travel/image-1.png"/>
+<img alt="Corporate and executive travel" class="" src="assets/img/tours/cards/27-corporate-and-executive-travel/image-2.jpg"/>
+<img alt="Corporate and executive travel" class="" src="assets/img/tours/cards/27-corporate-and-executive-travel/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R400</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> By request</div>
+</div>
+<h4>Corporate and executive travel</h4>
+<p class="text-muted">Executive transfers for meetings and events.</p>
+<ul class="tour-features">
+<li>On-demand executive transfers</li>
+<li>Professional chauffeurs</li>
+<li>Discreet service</li>
+<li>Wi-Fi on request</li>
+</ul>
+<div class="tour-actions">
+<a class="book-now-btn" data-service="corporate" href="index.html?tour=corporate#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div><div class="tour-card fade-in">
+<div class="tour-badge">Event</div>
+<div class="tour-slideshow">
+<img alt="Events, weddings, and private functions" class="active" src="assets/img/tours/cards/28-events-weddings-and-private-functions/image-1.jpg"/>
+<img alt="Events, weddings, and private functions" class="" src="assets/img/tours/cards/28-events-weddings-and-private-functions/image-2.jpg"/>
+<img alt="Events, weddings, and private functions" class="" src="assets/img/tours/cards/28-events-weddings-and-private-functions/image-3.jpg"/>
+<div class="slideshow-controls">
+<div class="slide-dot active" data-slide="0"></div>
+<div class="slide-dot" data-slide="1"></div>
+<div class="slide-dot" data-slide="2"></div>
+</div>
+</div>
+<div class="tour-content">
+<div class="tour-meta">
+<div class="tour-price">From R500</div>
+<div class="tour-duration"><i class="far fa-clock me-1"></i> By request</div>
+</div>
+<h4>Events, weddings, and private functions</h4>
+<p class="text-muted">Luxury transport for special occasions.</p>
+<ul class="tour-features">
+<li>Event coordination</li>
+<li>Multiple vehicle options</li>
+<li>Flexible scheduling</li>
+<li>Premium service</li>
+</ul>
+<div class="tour-actions">
+<a class="book-now-btn" data-service="event" href="index.html?tour=event#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Now
+                                    </a>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="text-center mt-5">
+<a class="btn btn-primary-custom" href="index.html#contact">
+<i class="fas fa-headset me-2"></i> Need Help Choosing?
+                </a>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+<div class="container">
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p class="mt-3">Everything you need to know about our tours</p>
+</div>
+<div class="accordion" id="faqAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                            How do inclusions work?
+                        </button>
+</h2>
+<div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+<div class="accordion-body">
+                            Inclusions vary by itinerary. We confirm all details when you request a quote so you know exactly what is included for your route and schedule.
+                        </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                            How do bookings work?
+                        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+<div class="accordion-body">
+                            Share your preferred dates, pickup details, and itinerary. We will confirm availability and send a tailored quote based on your needs.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container">
+<h2 class="cta-title">Ready to Explore Cape Town?</h2>
+<p class="mb-4">Book your perfect tour today or contact us for personalized recommendations.</p>
+<div class="d-flex flex-wrap gap-3 justify-content-center">
+<a class="btn btn-primary-custom" href="index.html#booking">
+<i class="far fa-calendar-alt me-2"></i> Book Online Now
+                </a>
+<a class="btn btn-secondary-custom" href="tel:0610268025" style="background: transparent; border: 2px solid white; color: white;">
+<i class="fas fa-phone-alt me-2"></i> Call: 061 026 8025
+                </a>
+</div>
+<p class="mt-4 small">We respond promptly to booking requests and inquiries.</p>
+</div>
+</section>
+<!-- Footer with Logo from index.html -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-lg-4 mb-4 mb-lg-0">
+<div class="footer-logo-container">
+<video aria-label="ONYX logo animation" autoplay="" class="logo-video" loop="" muted="" playsinline="">
+<source src="assets/img/ONYX_logo_animation_2.mp4" type="video/mp4">
+</source></video>
+</div>
+<p>Premium luxury tours and transfers in Cape Town. Experience South Africa in comfort and style with our professional service.</p>
+<div class="social-icons mt-4">
+<a href="https://www.facebook.com/" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://twitter.com/" rel="noopener" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://wa.me/27739163011" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+<div class="footer-links">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="tours.html">All Tours</a></li>
+<li><a href="index.html#booking">Book Now</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+<div class="footer-links">
+<h5>Tour Categories</h5>
+<ul>
+<li><a class="tab-link-footer" data-tab="day-tours" href="#day-tours-tab">Day Tours</a></li>
+<li><a class="tab-link-footer" data-tab="multi-day" href="#multi-day-tab">Multi-Day Tours</a></li>
+
+<li><a class="tab-link-footer" data-tab="adventure" href="#adventure-tab">Adventure</a></li>
+<li><a class="tab-link-footer" data-tab="wildlife" href="#wildlife-tab">Wildlife</a></li>
+<li><a class="tab-link-footer" data-tab="transfers" href="#transfers-tab">Transfers</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-4">
+<div class="footer-links">
+<h5>Contact Info</h5>
+<ul>
+<li><i class="fas fa-phone me-2"></i> 061 026 8025</li>
+<li><i class="far fa-envelope me-2"></i> info@onyxtours.co.za</li>
+<li><i class="fas fa-map-marker-alt me-2"></i> Cape Town, RSA</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="copyright">
+<p>© 2023 ONYX Shuttle &amp; Tour Services. All rights reserved.</p>
+<p class="mb-0">Premium luxury experiences in Cape Town and beyond</p>
+</div>
+</div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect (from index.html)
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Footer tab links
+            const footerTabLinks = document.querySelectorAll('.tab-link-footer');
+            footerTabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    const tabElement = document.getElementById(tabId + '-tab');
+                    
+                    if (tabElement) {
+                        // Use Bootstrap to show the tab
+                        const tab = new bootstrap.Tab(tabElement);
+                        tab.show();
+                        
+                        // Scroll to the tours section
+                        document.querySelector('.packages-section').scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Tour slideshows - SAME FUNCTIONALITY AS index.html
+            function initTourSlideshows() {
+                const slideshows = document.querySelectorAll('.tour-slideshow');
+                
+                slideshows.forEach(slideshow => {
+                    const dots = slideshow.querySelectorAll('.slide-dot');
+                    const images = slideshow.querySelectorAll('img');
+                    let currentSlide = 0;
+                    
+                    function showSlide(index) {
+                        images.forEach(img => {
+                            img.classList.remove('active');
+                            img.style.opacity = '0';
+                        });
+                        
+                        dots.forEach(dot => dot.classList.remove('active'));
+                        
+                        images[index].classList.add('active');
+                        images[index].style.opacity = '1';
+                        dots[index].classList.add('active');
+                        currentSlide = index;
+                    }
+                    
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => showSlide(index));
+                    });
+                    
+                    // Auto-rotate every 4 seconds
+                    setInterval(() => {
+                        let nextSlide = (currentSlide + 1) % images.length;
+                        showSlide(nextSlide);
+                    }, 4000);
+                });
+            }
+            
+            initTourSlideshows();
+            
+            // Quick View Modal - builds from the clicked card
+            const quickViewButtons = document.querySelectorAll('.quick-view-btn');
+            quickViewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.tour-card');
+                    if (!card) return;
+                    showQuickViewModalFromCard(card);
+                });
+            });
+            
+            function extractTourDataFromCard(card) {
+                const title = card.querySelector('h4')?.textContent.trim() || 'Tour';
+                const price = card.querySelector('.tour-price')?.textContent.trim() || '';
+                const duration = card.querySelector('.tour-duration')?.textContent.trim() || '';
+                const description = card.querySelector('.text-muted')?.textContent.trim() || '';
+                let images = Array.from(card.querySelectorAll('.tour-slideshow img'))
+                    .map(img => img.getAttribute('src'))
+                    .filter(Boolean);
+                if (images.length === 0) {
+                    images = ['assets/img/tours/all-tours/cape-peninsula-1.jpg'];
+                }
+                const features = Array.from(card.querySelectorAll('.tour-features li'))
+                    .map(li => li.textContent.trim())
+                    .filter(Boolean);
+                const service = card.querySelector('.book-now-btn')?.getAttribute('data-service') || '';
+                const includes = [
+                    'Professional driver',
+                    'Luxury private transport',
+                    'Hotel pickup & drop-off',
+                    'Bottled water'
+                ];
+                
+                return { title, price, duration, description, images, features, includes, service };
+            }
+            
+            function showQuickViewModalFromCard(card) {
+                const tour = extractTourDataFromCard(card);
+                const bookingLink = tour.service ? `index.html?tour=${tour.service}#booking` : 'index.html#booking';
+                
+                const slideshowHTML = tour.images.map((src, index) => {
+                    return `<img src="${src}" class="${index === 0 ? 'active' : ''}" alt="${tour.title}">`;
+                }).join('');
+                
+                const dotsHTML = tour.images.map((_, index) =>
+                    `<div class="slide-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></div>`
+                ).join('');
+                
+                const featuresHTML = tour.features.length ? `
+                    <div class="row mb-4">
+                        ${tour.features.map(text => `
+                            <div class="col-md-6 mb-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check me-2" style="color: var(--gold);"></i>
+                                    <span>${text}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '';
+                
+                const includesHTML = tour.includes.length ? `
+                    <div class="bg-light p-3 rounded mb-4">
+                        <h6 class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--gold);"></i> Package Includes</h6>
+                        <ul class="tour-features">
+                            ${tour.includes.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : '';
+                
+                const modalHTML = `
+                    <div class="modal fade" id="quickViewModal" tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background: var(--primary); color: white;">
+                                    <h5 class="modal-title">${tour.title}</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="tour-slideshow" style="height: 300px;">
+                                        ${slideshowHTML}
+                                        <div class="slideshow-controls">
+                                            ${dotsHTML}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="tour-price">${tour.price}</div>
+                                            <div class="tour-duration">${tour.duration}</div>
+                                        </div>
+                                        
+                                        <p class="mb-4">${tour.description}</p>
+                                        
+                                        ${featuresHTML}
+                                        ${includesHTML}
+                                        
+                                        <div class="d-flex gap-3">
+                                            <button type="button" class="btn btn-secondary flex-grow-1" data-bs-dismiss="modal">
+                                                <i class="fas fa-times me-2"></i> Close
+                                            </button>
+                                            <a href="${bookingLink}" class="btn btn-primary-custom flex-grow-1" data-bs-dismiss="modal">
+                                                <i class="far fa-calendar-alt me-2"></i> Book This Tour
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                const modalContainer = document.createElement('div');
+                modalContainer.innerHTML = modalHTML;
+                document.body.appendChild(modalContainer);
+                
+                const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+                modal.show();
+                
+                const modalSlideshow = document.querySelector('#quickViewModal .tour-slideshow');
+                const modalDots = modalSlideshow?.querySelectorAll('.slide-dot');
+                const modalImages = modalSlideshow?.querySelectorAll('img');
+                
+                if (modalSlideshow && modalDots && modalImages) {
+                    let currentModalSlide = 0;
+                    
+                    function showModalSlide(index) {
+                        modalImages.forEach(img => {
+                            img.classList.remove('active');
+                            img.style.opacity = '0';
+                        });
+                        
+                        modalDots.forEach(dot => dot.classList.remove('active'));
+                        
+                        modalImages[index].classList.add('active');
+                        modalImages[index].style.opacity = '1';
+                        modalDots[index].classList.add('active');
+                        currentModalSlide = index;
+                    }
+                    
+                    modalDots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => showModalSlide(index));
+                    });
+                    
+                    const modalInterval = setInterval(() => {
+                        let nextSlide = (currentModalSlide + 1) % modalImages.length;
+                        showModalSlide(nextSlide);
+                    }, 5000);
+                    
+                    document.getElementById('quickViewModal').addEventListener('hidden.bs.modal', function() {
+                        clearInterval(modalInterval);
+                        modalContainer.remove();
+                    });
+                } else {
+                    document.getElementById('quickViewModal').addEventListener('hidden.bs.modal', function() {
+                        modalContainer.remove();
+                    });
+                }
+            }            // Animate cards on tab change
+            const tourTabs = document.querySelectorAll('#tourTabs button');
+            tourTabs.forEach(tab => {
+                tab.addEventListener('shown.bs.tab', function(event) {
+                    const targetId = event.target.getAttribute('data-bs-target');
+                    const targetPane = document.querySelector(targetId);
+                    
+                    // Re-initialize slideshows in the newly shown tab
+                    initTourSlideshows();
+                    
+                    // Animate cards in the newly shown tab
+                    const cards = targetPane.querySelectorAll('.tour-card');
+                    cards.forEach((card, index) => {
+                        card.style.animation = 'none';
+                        setTimeout(() => {
+                            card.style.animation = 'fadeIn 0.8s ease-out';
+                        }, index * 100);
+                    });
+                });
+            });
+            
+            // Animate cards on initial load
+            const initialCards = document.querySelectorAll('.tour-card');
+            initialCards.forEach((card, index) => {
+                card.style.animationDelay = (index * 0.1) + 's';
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#') && targetId.length > 1) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
